@@ -37,8 +37,13 @@ namespace WebSounds
             hiHatHit = new SoundPlayer();
             hiHatHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds3\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Hihat 2 - Echoed.wav";
 
+            Drumkit1 = new List<AxWindowsMediaPlayer>();
+
             for (int i = 0; i < 10; i++)
+            { 
                 Drumkit1.Add(new AxWindowsMediaPlayer());
+                Drumkit1[i].CreateControl(); 
+            }
 
             this.KeyPress +=
                 new KeyPressEventHandler(Form1_KeyPress);
@@ -106,7 +111,12 @@ namespace WebSounds
             snareHit.LoadAsync();
         }
 
-
-        
+        private void cbPlayMusic_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbPlayMusic.Checked == true)
+                KeyPreview = true;
+            else
+                KeyPreview = false;
+        }
     }
 }
