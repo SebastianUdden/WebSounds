@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WebSounds.Networking;
 using System.Media;
+using WMPLib;
+using AxWMPLib;
 
 namespace WebSounds
 {
