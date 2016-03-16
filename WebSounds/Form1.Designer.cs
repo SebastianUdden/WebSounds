@@ -34,6 +34,8 @@
             this.bSendMessage = new System.Windows.Forms.Button();
             this.lIPaddress = new System.Windows.Forms.Label();
             this.lbChat = new System.Windows.Forms.ListBox();
+            this.bKick = new System.Windows.Forms.Button();
+            this.bSnare = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbIP
@@ -88,11 +90,33 @@
             this.lbChat.Size = new System.Drawing.Size(347, 225);
             this.lbChat.TabIndex = 6;
             // 
+            // bKick
+            // 
+            this.bKick.Location = new System.Drawing.Point(529, 139);
+            this.bKick.Name = "bKick";
+            this.bKick.Size = new System.Drawing.Size(75, 23);
+            this.bKick.TabIndex = 7;
+            this.bKick.Text = "Kick";
+            this.bKick.UseVisualStyleBackColor = true;
+            this.bKick.Click += new System.EventHandler(this.bKick_Click);
+            // 
+            // bSnare
+            // 
+            this.bSnare.Location = new System.Drawing.Point(529, 180);
+            this.bSnare.Name = "bSnare";
+            this.bSnare.Size = new System.Drawing.Size(75, 23);
+            this.bSnare.TabIndex = 8;
+            this.bSnare.Text = "Snare";
+            this.bSnare.UseVisualStyleBackColor = true;
+            this.bSnare.Click += new System.EventHandler(this.bSnare_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 435);
+            this.ClientSize = new System.Drawing.Size(758, 465);
+            this.Controls.Add(this.bSnare);
+            this.Controls.Add(this.bKick);
             this.Controls.Add(this.lbChat);
             this.Controls.Add(this.lIPaddress);
             this.Controls.Add(this.bSendMessage);
@@ -114,6 +138,8 @@
         private System.Windows.Forms.Button bSendMessage;
         private System.Windows.Forms.Label lIPaddress;
         private System.Windows.Forms.ListBox lbChat;
+        private System.Windows.Forms.Button bKick;
+        private System.Windows.Forms.Button bSnare;
     }
 }
 
