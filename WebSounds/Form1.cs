@@ -62,7 +62,7 @@ namespace WebSounds
 
         private void bKick_Click(object sender, EventArgs e)
         {
-            kickHit.Play();
+            kickHit.LoadAsync();
         }
         void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -95,7 +95,7 @@ namespace WebSounds
 
         private void bSnare_Click(object sender, EventArgs e)
         {
-            snareHit.Play();
+            snareHit.LoadAsync();
         }
             //    switch (e.KeyChar)
             //    {
