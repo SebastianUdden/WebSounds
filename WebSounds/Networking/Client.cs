@@ -43,7 +43,6 @@ namespace WebSounds.Networking
             Thread listenerThread = new Thread(Listen);
             listenerThread.Start();
             ml = messageList;
-            
         }
 
         public void Listen()
