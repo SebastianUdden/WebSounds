@@ -16,5 +16,10 @@ namespace WebSounds
         {
             InitializeComponent();
         }
+
+        private void bConnect_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
