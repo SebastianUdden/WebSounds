@@ -13,6 +13,7 @@ using WebSounds.Networking;
 using System.Media;
 using WMPLib;
 using AxWMPLib;
+using System.Windows.Media.Mediaplayer;
 
 namespace WebSounds
 {
