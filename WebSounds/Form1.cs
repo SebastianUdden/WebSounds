@@ -13,7 +13,6 @@ using WebSounds.Networking;
 using System.Media;
 using WMPLib;
 using AxWMPLib;
-using System.Windows.Media.Mediaplayer;
 
 namespace WebSounds
 {
@@ -32,6 +31,7 @@ namespace WebSounds
             messages = new List<string>();
             ListBox.CheckForIllegalCrossThreadCalls = false;
             kickHit = new SoundPlayer();
+            
             kickHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds3\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Kick - House.wav";
             snareHit = new SoundPlayer();
             snareHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds3\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Snare - House.wav";
@@ -78,32 +78,11 @@ namespace WebSounds
         {
 
         }
+
         void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
             Debug.WriteLine("Key pressed: " + e.KeyChar);
-
-            myClient.SendMusicKey(e.KeyChar.ToString());
-
-            switch (e.KeyChar)
-            {
-                case 'a':
-                    Drumkit1[0].URL = kickHit.SoundLocation;
-                    Drumkit1[0].Ctlcontrols.play();
-                    break;
-                case 'w':
-                    Drumkit1[1].URL = snareHit.SoundLocation;
-                    Drumkit1[1].Ctlcontrols.play();
-                    break;
-                case 's':
-                    Drumkit1[2].URL = hiHatHit.SoundLocation;
-                    Drumkit1[2].Ctlcontrols.play();
-                    break;
-                case 'd':
-                    break;
-                case (char)55:
-                    e.Handled = true;
-                    break;
-            }
+            myClient.SendMusicKey("music"+e.KeyChar.ToString());
         }
 
 
