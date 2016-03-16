@@ -13,7 +13,6 @@ using WebSounds.Networking;
 using System.Media;
 using WMPLib;
 using AxWMPLib;
-using System.Windows.Media.Mediaplayer;
 
 namespace WebSounds
 {
@@ -24,13 +23,17 @@ namespace WebSounds
         public static SoundPlayer kickHit;
         public static SoundPlayer snareHit;
         public static SoundPlayer hiHatHit;
-        public static List<AxWindowsMediaPlayer> Drumkit1;
+        //public static List<AxWindowsMediaPlayer> Drumkit1;
+        public static AxWindowsMediaPlayer Kick;
+        public static AxWindowsMediaPlayer Snare;
+        public static AxWindowsMediaPlayer HiHat;
 
         public Form1()
         {
             InitializeComponent();
             messages = new List<string>();
             ListBox.CheckForIllegalCrossThreadCalls = false;
+
             kickHit = new SoundPlayer();
             kickHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds3\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Kick - House.wav";
             snareHit = new SoundPlayer();
@@ -38,8 +41,16 @@ namespace WebSounds
             hiHatHit = new SoundPlayer();
             hiHatHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds3\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Hihat 2 - Echoed.wav";
 
-            for (int i = 0; i < 10; i++)
-                Drumkit1.Add(new AxWindowsMediaPlayer());
+            //for (int i = 0; i < 3; i++)
+            //    Drumkit1.Add(new AxWindowsMediaPlayer());
+
+            Kick = new AxWindowsMediaPlayer();
+            Snare = new AxWindowsMediaPlayer();
+            HiHat = new AxWindowsMediaPlayer();
+
+            //Drumkit1.Add(Kick);
+            //Drumkit1.Add(Snare);
+            //Drumkit1.Add(HiHat);
 
             this.KeyPress +=
                 new KeyPressEventHandler(Form1_KeyPress);
@@ -77,23 +88,29 @@ namespace WebSounds
         {
             Debug.WriteLine("Key pressed: " + e.KeyChar);
 
-            myClient.SendMusicKey(e.KeyChar.ToString());
+            //myClient.SendMusicKey(e.KeyChar.ToString());
 
             switch (e.KeyChar)
             {
                 case 'a':
-                    Drumkit1[0].URL = kickHit.SoundLocation;
-                    Drumkit1[0].Ctlcontrols.play();
+                    Kick.URL = @"C:\Users\Administrator\Source\Repos\WebSounds\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Kick - House.wav";
+                    Kick.Ctlcontrols.play();
+                    //Drumkit1[0].URL = kickHit.SoundLocation;
+                    //Drumkit1[0].Ctlcontrols.play();
                     break;
                 case 'w':
-                    Drumkit1[1].URL = snareHit.SoundLocation;
-                    Drumkit1[1].Ctlcontrols.play();
+                    Snare.URL = snareHit.SoundLocation;
+                    Snare.Ctlcontrols.play();
+                    //Drumkit1[1].URL = snareHit.SoundLocation;
+                    //Drumkit1[1].Ctlcontrols.play();
                     break;
                 case 's':
-                    Drumkit1[2].URL = hiHatHit.SoundLocation;
-                    Drumkit1[2].Ctlcontrols.play();
+                    //Drumkit1[2].URL = hiHatHit.SoundLocation;
+                    //Drumkit1[2].Ctlcontrols.play();
                     break;
                 case 'd':
+                    HiHat.URL = hiHatHit.SoundLocation;
+                    HiHat.Ctlcontrols.play();
                     break;
                 case (char)55:
                     e.Handled = true;
@@ -101,13 +118,9 @@ namespace WebSounds
             }
         }
 
-
         private void bSnare_Click(object sender, EventArgs e)
         {
-            snareHit.LoadAsync();
+            //snareHit.LoadAsync();
         }
-
-
-        
     }
 }
