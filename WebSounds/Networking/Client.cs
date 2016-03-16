@@ -57,7 +57,7 @@ namespace WebSounds.Networking
                     message = new BinaryReader(n).ReadString();
 
                     //var chat = Application.OpenForms["Form1"].Controls["lbChat"] as ListBox;
-                    listBox.Items.Add(message);
+                    listBox.Items.Add("Anonymous: " + message);
                 }
             }
             catch (Exception ex)
