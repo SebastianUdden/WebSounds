@@ -23,17 +23,22 @@ namespace WebSounds
         public static SoundPlayer kickHit;
         public static SoundPlayer snareHit;
         public static SoundPlayer hiHatHit;
+        public static List<AxWindowsMediaPlayer> Drumkit1;
+
         public Form1()
         {
             InitializeComponent();
             messages = new List<string>();
             ListBox.CheckForIllegalCrossThreadCalls = false;
             kickHit = new SoundPlayer();
-            kickHit.SoundLocation = @"C:\Users\Administrator\Documents\Visual Studio 2015\Projects\WebSounds\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Kick - House.wav";
+            kickHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds3\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Kick - House.wav";
             snareHit = new SoundPlayer();
-            snareHit.SoundLocation = @"C:\Users\Administrator\Documents\Visual Studio 2015\Projects\WebSounds\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Snare - House.wav";
+            snareHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds3\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Snare - House.wav";
             hiHatHit = new SoundPlayer();
-            hiHatHit.SoundLocation = @"C:\Users\Administrator\Documents\Visual Studio 2015\Projects\WebSounds\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Hihat 2 - Echoed.wav";
+            hiHatHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds3\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Hihat 2 - Echoed.wav";
+
+            for (int i = 0; i < 10; i++)
+                Drumkit1.Add(new AxWindowsMediaPlayer());
 
             this.KeyPress +=
                 new KeyPressEventHandler(Form1_KeyPress);
@@ -52,6 +57,7 @@ namespace WebSounds
 
         private void bSendMessage_Click(object sender, EventArgs e)
         {
+
             myClient.Send(tbMessage.Text);
             lbChat.Items.Add("Me: " + tbMessage.Text);
 
@@ -64,31 +70,34 @@ namespace WebSounds
 
         private void bKick_Click(object sender, EventArgs e)
         {
-            kickHit.LoadAsync();
+
         }
         void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
             Debug.WriteLine("Key pressed: " + e.KeyChar);
 
+            myClient.SendMusicKey(e.KeyChar.ToString());
+
             switch (e.KeyChar)
             {
                 case 'a':
-                    MessageBox.Show("You pressed key A");
+                    Drumkit1[0].URL = kickHit.SoundLocation;
+                    Drumkit1[0].Ctlcontrols.play();
                     break;
                 case 'w':
-                    MessageBox.Show("You pressed key W");
+                    Drumkit1[1].URL = snareHit.SoundLocation;
+                    Drumkit1[1].Ctlcontrols.play();
                     break;
                 case 's':
-                    MessageBox.Show("You pressed key S");
+                    Drumkit1[2].URL = hiHatHit.SoundLocation;
+                    Drumkit1[2].Ctlcontrols.play();
                     break;
                 case 'd':
-                    MessageBox.Show("You pressed key D");
                     break;
                 case (char)55:
                     e.Handled = true;
                     break;
             }
-
         }
 
 
