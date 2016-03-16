@@ -51,6 +51,7 @@
             this.bConnect.TabIndex = 1;
             this.bConnect.Text = "Connect";
             this.bConnect.UseVisualStyleBackColor = true;
+            this.bConnect.Click += new System.EventHandler(this.bConnect_Click);
             // 
             // rtbChat
             // 
