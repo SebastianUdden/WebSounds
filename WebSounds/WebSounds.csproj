@@ -76,6 +76,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sounds\Instruments\Drums\Drumkit 1\Hihat - open.wav" />
+    <Content Include="Sounds\Instruments\Drums\Drumkit 1\Hihat 2 - Echoed.wav" />
+    <Content Include="Sounds\Instruments\Drums\Drumkit 1\Kick - House.wav" />
+    <Content Include="Sounds\Instruments\Drums\Drumkit 1\Snare - House.wav" />
+    <Content Include="Sounds\Instruments\Drums\Drumkit 1\Tom 1 - Tec-studios Dr Tom - g.wav" />
+    <Content Include="Sounds\Instruments\Drums\Drumkit 1\Tom 2 - Zgump.wav" />
+    <Content Include="Sounds\Instruments\Drums\Drumkit 1\Tom 3 - Phat 909 room-tom.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
