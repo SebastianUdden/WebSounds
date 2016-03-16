@@ -77,36 +77,25 @@ namespace WebSounds
                     MessageBox.Show("You pressed key W");
                     break;
                 case 's':
-                    MessageBox.Show("You pressed key W");
+                    MessageBox.Show("You pressed key S");
                     break;
                 case 'd':
-                    MessageBox.Show("You pressed key W");
+                    MessageBox.Show("You pressed key D");
                     break;
                 case (char)55:
                     e.Handled = true;
                     break;
             }
 
-            ////Numbers etc
-            //if (e.KeyChar >= 48 && e.KeyChar <= 57)
-            //{
-            //    MessageBox.Show("Form.KeyPress: '" +
-            //        e.KeyChar.ToString() + "' pressed.");
+        }
+
 
         private void bSnare_Click(object sender, EventArgs e)
         {
             snareHit.Play();
         }
-            //    switch (e.KeyChar)
-            //    {
-            //        case (char)49:
-            //        case (char)52:
-            //        case (char)55:
-            //            e.Handled = true;
-            //            break;
-            //    }
-            //}
 
-        }
+
+        
     }
 }
