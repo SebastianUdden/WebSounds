@@ -78,7 +78,7 @@
             this.lIPaddress.AutoSize = true;
             this.lIPaddress.Location = new System.Drawing.Point(13, 37);
             this.lIPaddress.Name = "lIPaddress";
-            this.lIPaddress.Size = new System.Drawing.Size(65, 15);
+            this.lIPaddress.Size = new System.Drawing.Size(58, 13);
             this.lIPaddress.TabIndex = 5;
             this.lIPaddress.Text = "IP Address";
             // 
@@ -123,6 +123,7 @@
             this.Controls.Add(this.tbMessage);
             this.Controls.Add(this.bConnect);
             this.Controls.Add(this.tbIP);
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -31,6 +32,9 @@ namespace WebSounds
             snareHit.SoundLocation = @"C:\Users\Administrator\Documents\Visual Studio 2015\Projects\WebSounds\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Snare - House.wav";
             hiHatHit = new SoundPlayer();
             hiHatHit.SoundLocation = @"C:\Users\Administrator\Documents\Visual Studio 2015\Projects\WebSounds\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Hihat 2 - Echoed.wav";
+
+            this.KeyPress +=
+                new KeyPressEventHandler(Form1_KeyPress);
         }
 
         private void bConnect_Click(object sender, EventArgs e)
@@ -60,10 +64,49 @@ namespace WebSounds
         {
             kickHit.Play();
         }
+        void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Debug.WriteLine("Key pressed: " + e.KeyChar);
+
+            switch (e.KeyChar)
+            {
+                case 'a':
+                    MessageBox.Show("You pressed key A");
+                    break;
+                case 'w':
+                    MessageBox.Show("You pressed key W");
+                    break;
+                case 's':
+                    MessageBox.Show("You pressed key W");
+                    break;
+                case 'd':
+                    MessageBox.Show("You pressed key W");
+                    break;
+                case (char)55:
+                    e.Handled = true;
+                    break;
+            }
+
+            ////Numbers etc
+            //if (e.KeyChar >= 48 && e.KeyChar <= 57)
+            //{
+            //    MessageBox.Show("Form.KeyPress: '" +
+            //        e.KeyChar.ToString() + "' pressed.");
 
         private void bSnare_Click(object sender, EventArgs e)
         {
             snareHit.Play();
+        }
+            //    switch (e.KeyChar)
+            //    {
+            //        case (char)49:
+            //        case (char)52:
+            //        case (char)55:
+            //            e.Handled = true;
+            //            break;
+            //    }
+            //}
+
         }
     }
 }
