@@ -37,6 +37,7 @@ namespace WebSounds
         private void bSendMessage_Click(object sender, EventArgs e)
         {
             myClient.Send(tbMessage.Text);
+            lbChat.Items.Add("Me: " + tbMessage.Text);
 
             Thread.Sleep(50);
             foreach (var message in messages)
