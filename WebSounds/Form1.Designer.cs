@@ -39,24 +39,23 @@
             this.bKick = new System.Windows.Forms.Button();
             this.bSnare = new System.Windows.Forms.Button();
             this.mpBasic = new AxWMPLib.AxWindowsMediaPlayer();
+            this.cbPlayMusic = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.mpBasic)).BeginInit();
             this.SuspendLayout();
             // 
             // tbIP
             // 
-            this.tbIP.Location = new System.Drawing.Point(16, 69);
-            this.tbIP.Margin = new System.Windows.Forms.Padding(4);
+            this.tbIP.Location = new System.Drawing.Point(12, 56);
             this.tbIP.Name = "tbIP";
-            this.tbIP.Size = new System.Drawing.Size(216, 22);
+            this.tbIP.Size = new System.Drawing.Size(163, 20);
             this.tbIP.TabIndex = 0;
             this.tbIP.Text = "192.168.220.97";
             // 
             // bConnect
             // 
-            this.bConnect.Location = new System.Drawing.Point(17, 102);
-            this.bConnect.Margin = new System.Windows.Forms.Padding(4);
+            this.bConnect.Location = new System.Drawing.Point(13, 83);
             this.bConnect.Name = "bConnect";
-            this.bConnect.Size = new System.Drawing.Size(100, 28);
+            this.bConnect.Size = new System.Drawing.Size(75, 23);
             this.bConnect.TabIndex = 1;
             this.bConnect.Text = "Connect";
             this.bConnect.UseVisualStyleBackColor = true;
@@ -64,18 +63,16 @@
             // 
             // tbMessage
             // 
-            this.tbMessage.Location = new System.Drawing.Point(16, 436);
-            this.tbMessage.Margin = new System.Windows.Forms.Padding(4);
+            this.tbMessage.Location = new System.Drawing.Point(12, 354);
             this.tbMessage.Name = "tbMessage";
-            this.tbMessage.Size = new System.Drawing.Size(463, 22);
+            this.tbMessage.Size = new System.Drawing.Size(348, 20);
             this.tbMessage.TabIndex = 3;
             // 
             // bSendMessage
             // 
-            this.bSendMessage.Location = new System.Drawing.Point(17, 468);
-            this.bSendMessage.Margin = new System.Windows.Forms.Padding(4);
+            this.bSendMessage.Location = new System.Drawing.Point(13, 380);
             this.bSendMessage.Name = "bSendMessage";
-            this.bSendMessage.Size = new System.Drawing.Size(100, 28);
+            this.bSendMessage.Size = new System.Drawing.Size(75, 23);
             this.bSendMessage.TabIndex = 4;
             this.bSendMessage.Text = "Send";
             this.bSendMessage.UseVisualStyleBackColor = true;
@@ -84,29 +81,25 @@
             // lIPaddress
             // 
             this.lIPaddress.AutoSize = true;
-            this.lIPaddress.Location = new System.Drawing.Point(17, 46);
-            this.lIPaddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lIPaddress.Location = new System.Drawing.Point(13, 37);
             this.lIPaddress.Name = "lIPaddress";
-            this.lIPaddress.Size = new System.Drawing.Size(76, 17);
+            this.lIPaddress.Size = new System.Drawing.Size(58, 13);
             this.lIPaddress.TabIndex = 5;
             this.lIPaddress.Text = "IP Address";
             // 
             // lbChat
             // 
             this.lbChat.FormattingEnabled = true;
-            this.lbChat.ItemHeight = 16;
-            this.lbChat.Location = new System.Drawing.Point(17, 138);
-            this.lbChat.Margin = new System.Windows.Forms.Padding(4);
+            this.lbChat.Location = new System.Drawing.Point(13, 112);
             this.lbChat.Name = "lbChat";
-            this.lbChat.Size = new System.Drawing.Size(461, 276);
+            this.lbChat.Size = new System.Drawing.Size(347, 225);
             this.lbChat.TabIndex = 6;
             // 
             // bKick
             // 
-            this.bKick.Location = new System.Drawing.Point(566, 483);
-            this.bKick.Margin = new System.Windows.Forms.Padding(4);
+            this.bKick.Location = new System.Drawing.Point(529, 139);
             this.bKick.Name = "bKick";
-            this.bKick.Size = new System.Drawing.Size(239, 175);
+            this.bKick.Size = new System.Drawing.Size(75, 23);
             this.bKick.TabIndex = 7;
             this.bKick.Text = "Kick";
             this.bKick.UseVisualStyleBackColor = true;
@@ -114,10 +107,9 @@
             // 
             // bSnare
             // 
-            this.bSnare.Location = new System.Drawing.Point(856, 483);
-            this.bSnare.Margin = new System.Windows.Forms.Padding(4);
+            this.bSnare.Location = new System.Drawing.Point(529, 180);
             this.bSnare.Name = "bSnare";
-            this.bSnare.Size = new System.Drawing.Size(236, 175);
+            this.bSnare.Size = new System.Drawing.Size(75, 23);
             this.bSnare.TabIndex = 8;
             this.bSnare.Text = "Snare";
             this.bSnare.UseVisualStyleBackColor = true;
@@ -126,17 +118,30 @@
             // mpBasic
             // 
             this.mpBasic.Enabled = true;
-            this.mpBasic.Location = new System.Drawing.Point(566, 138);
+            this.mpBasic.Location = new System.Drawing.Point(566, 267);
+            this.mpBasic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mpBasic.Name = "mpBasic";
             this.mpBasic.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mpBasic.OcxState")));
-            this.mpBasic.Size = new System.Drawing.Size(526, 320);
+            this.mpBasic.Size = new System.Drawing.Size(239, 191);
             this.mpBasic.TabIndex = 9;
+            // 
+            // cbPlayMusic
+            // 
+            this.cbPlayMusic.AutoSize = true;
+            this.cbPlayMusic.Location = new System.Drawing.Point(283, 87);
+            this.cbPlayMusic.Name = "cbPlayMusic";
+            this.cbPlayMusic.Size = new System.Drawing.Size(77, 17);
+            this.cbPlayMusic.TabIndex = 10;
+            this.cbPlayMusic.Text = "Play Music";
+            this.cbPlayMusic.UseVisualStyleBackColor = true;
+            this.cbPlayMusic.CheckedChanged += new System.EventHandler(this.cbPlayMusic_CheckedChanged);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1230, 769);
+            this.ClientSize = new System.Drawing.Size(758, 465);
+            this.Controls.Add(this.cbPlayMusic);
             this.Controls.Add(this.mpBasic);
             this.Controls.Add(this.bSnare);
             this.Controls.Add(this.bKick);
@@ -146,8 +151,6 @@
             this.Controls.Add(this.tbMessage);
             this.Controls.Add(this.bConnect);
             this.Controls.Add(this.tbIP);
-            this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.mpBasic)).EndInit();
@@ -167,6 +170,7 @@
         private System.Windows.Forms.Button bKick;
         private System.Windows.Forms.Button bSnare;
         private AxWMPLib.AxWindowsMediaPlayer mpBasic;
+        private System.Windows.Forms.CheckBox cbPlayMusic;
     }
 }
 
