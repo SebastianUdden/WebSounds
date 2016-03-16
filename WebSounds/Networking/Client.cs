@@ -21,10 +21,13 @@ namespace WebSounds.Networking
         private TcpClient client;
         public ListBox listBox;
         public List<string> ml;
-        public static List<AxWindowsMediaPlayer> Drumkit1;
-        public static SoundPlayer kickHit;
-        public static SoundPlayer snareHit;
-        public static SoundPlayer hiHatHit;
+
+
+        List<AxWindowsMediaPlayer> hiHats;
+        List<AxWindowsMediaPlayer> snares;
+        List<AxWindowsMediaPlayer> kicks;
+
+
 
         public Client(string ipAddress, ListBox lb)
         {
@@ -52,28 +55,36 @@ namespace WebSounds.Networking
             listenerThread.Start();
             listBox = lb;
 
-            kickHit = new SoundPlayer();
-
-            kickHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds3\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Kick - House.wav";
-            snareHit = new SoundPlayer();
-            snareHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds3\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Snare - House.wav";
-            hiHatHit = new SoundPlayer();
-            hiHatHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds3\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Hihat 2 - Echoed.wav";
-
-            Drumkit1 = new List<AxWindowsMediaPlayer>();
-
-            for (int i = 0; i < 10; i++)
+            hiHats = new List<AxWindowsMediaPlayer>();
+            for(int i = 0; i < 20; i++)
             {
-                Drumkit1.Add(new AxWindowsMediaPlayer());
-                Drumkit1[i].CreateControl();
+                hiHats.Add(new AxWindowsMediaPlayer());
+                hiHats[i].CreateControl();
+                hiHats[i].URL = @"C:\Users\Administrator\Source\Repos\WebSounds3\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Hihat 2 - Echoed.wav";
             }
 
+            snares = new List<AxWindowsMediaPlayer>();
+            for (int i = 0; i < 20; i++)
+            {
+                snares.Add(new AxWindowsMediaPlayer());
+                snares[i].CreateControl();
+                snares[i].URL = @"C:\Users\Administrator\Source\Repos\WebSounds3\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Snare - House.wav";
+            }
+
+            kicks = new List<AxWindowsMediaPlayer>();
+            for (int i = 0; i < 20; i++)
+            {
+                kicks.Add(new AxWindowsMediaPlayer());
+                kicks[i].CreateControl();
+                kicks[i].URL = @"C:\Users\Administrator\Source\Repos\WebSounds3\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Kick - House.wav";
+            }
 
         }
 
         public void Listen()
         {
             string message = "";
+            int counter = 0;
 
             try
             {
@@ -81,7 +92,6 @@ namespace WebSounds.Networking
                 {
                     NetworkStream n = client.GetStream();
                     message = new BinaryReader(n).ReadString();
-                    
 
                     if (message.Substring(0, 5) == "music")
                     {
@@ -90,20 +100,22 @@ namespace WebSounds.Networking
                         switch (message.Substring(5, 1))
                         {
                             case "a":
-                                Drumkit1[0].URL = kickHit.SoundLocation;
-                                Drumkit1[0].Ctlcontrols.play();
+                                hiHats[counter].Ctlcontrols.play();
                                 break;
                             case "w":
-                                Drumkit1[1].URL = snareHit.SoundLocation;
-                                Drumkit1[1].Ctlcontrols.play();
+                                snares[counter].Ctlcontrols.play();
                                 break;
                             case "s":
-                                Drumkit1[2].URL = hiHatHit.SoundLocation;
-                                Drumkit1[2].Ctlcontrols.play();
+                                kicks[counter].Ctlcontrols.play();
                                 break;
                             case "d":
                                 break;
                         }
+
+                        counter++;
+
+                        if (counter > 19)
+                            counter = 0; 
 
                     }
                     else
