@@ -42,6 +42,7 @@
             this.tbIP.Name = "tbIP";
             this.tbIP.Size = new System.Drawing.Size(163, 20);
             this.tbIP.TabIndex = 0;
+            this.tbIP.Text = "192.168.220.97";
             // 
             // bConnect
             // 
