@@ -19,6 +19,8 @@ namespace WebSounds
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+            StartClient();
         }
 
         static void StartClient()
