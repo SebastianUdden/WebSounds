@@ -9,14 +9,23 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebSounds.Networking;
+using System.Media;
+using WMPLib;
+using AxWMPLib;
 
 namespace WebSounds.Networking
 {
     public class Client
-    {
+    {    
         private TcpClient client;
         public ListBox listBox;
         public List<string> ml;
+
+        public static SoundPlayer kickHit;
+        public static SoundPlayer snareHit;
+        public static SoundPlayer hiHatHit;
+        public static List<AxWindowsMediaPlayer> Drumkit1;
 
         public Client(string ipAddress, ListBox lb)
         {
@@ -43,6 +52,21 @@ namespace WebSounds.Networking
             Thread listenerThread = new Thread(Listen);
             listenerThread.Start();
             listBox = lb;
+
+            kickHit = new SoundPlayer();
+            kickHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Kick - House.wav";
+            snareHit = new SoundPlayer();
+            snareHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Snare - House.wav";
+            hiHatHit = new SoundPlayer();
+            hiHatHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Hihat 2 - Echoed.wav";
+
+            Drumkit1 = new List<AxWindowsMediaPlayer>();
+
+            for (int i = 0; i < 10; i++)
+            {
+                Drumkit1.Add(new AxWindowsMediaPlayer());
+                Drumkit1[i].CreateControl();
+            }
         }
 
         public void Listen()

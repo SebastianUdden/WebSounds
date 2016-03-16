@@ -13,7 +13,6 @@ using WebSounds.Networking;
 using System.Media;
 using WMPLib;
 using AxWMPLib;
-using System.Windows.Media.Mediaplayer;
 
 namespace WebSounds
 {
@@ -21,30 +20,14 @@ namespace WebSounds
     {
         public static Client myClient;
         public static List<string> messages;
-        public static SoundPlayer kickHit;
-        public static SoundPlayer snareHit;
-        public static SoundPlayer hiHatHit;
-        public static List<AxWindowsMediaPlayer> Drumkit1;
+        
 
         public Form1()
         {
             InitializeComponent();
             messages = new List<string>();
             ListBox.CheckForIllegalCrossThreadCalls = false;
-            kickHit = new SoundPlayer();
-            kickHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds3\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Kick - House.wav";
-            snareHit = new SoundPlayer();
-            snareHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds3\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Snare - House.wav";
-            hiHatHit = new SoundPlayer();
-            hiHatHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds3\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Hihat 2 - Echoed.wav";
-
-            Drumkit1 = new List<AxWindowsMediaPlayer>();
-
-            for (int i = 0; i < 10; i++)
-            { 
-                Drumkit1.Add(new AxWindowsMediaPlayer());
-                Drumkit1[i].CreateControl(); 
-            }
+            
 
             this.KeyPress +=
                 new KeyPressEventHandler(Form1_KeyPress);
