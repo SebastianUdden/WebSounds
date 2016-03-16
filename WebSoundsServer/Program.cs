@@ -58,21 +58,10 @@ namespace WebSoundsServer
             {
                 foreach (ClientHandler tmpClient in clients)
                 {
-
-                    if (tmpClient != client)
-                    {
-                        NetworkStream n = tmpClient.tcpclient.GetStream();
-                        BinaryWriter w = new BinaryWriter(n);
-                        w.Write(message);
-                        w.Flush();
-                    }
-                    else if (clients.Count() == 1)
-                    {
-                        NetworkStream n = tmpClient.tcpclient.GetStream();
-                        BinaryWriter w = new BinaryWriter(n);
-                        w.Write(message);
-                        w.Flush();
-                    }
+                    NetworkStream n = tmpClient.tcpclient.GetStream();
+                    BinaryWriter w = new BinaryWriter(n);
+                    w.Write(message);
+                    w.Flush();
                 }
             }
 
