@@ -15,43 +15,39 @@ namespace WebSounds.Networking
     public class Client
     {
         private TcpClient client;
+        //public ListBox lb;
+        public List<string> ml;
 
-        public void Start(Object ipAddress)
+        public Client(string ipAddress, List<string> messageList)
         {
             #region Get local IP
-            IPHostEntry host;
-            string localIP = "?";
-            host = Dns.GetHostEntry(Dns.GetHostName());
-            foreach (IPAddress ip in host.AddressList)
-            {
-                if (ip.AddressFamily == AddressFamily.InterNetwork)
-                {
-                    localIP = ip.ToString();
-                }
-            }
+            //IPHostEntry host;
+            //string localIP = "?";
+            //host = Dns.GetHostEntry(Dns.GetHostName());
+            //foreach (IPAddress ip in host.AddressList)
+            //{
+            //    if (ip.AddressFamily == AddressFamily.InterNetwork)
+            //    {
+            //        localIP = ip.ToString();
+            //    }
+            //}
 
-            Console.WriteLine($"IP: {localIP}");
+            //Console.WriteLine($"IP: {localIP}");
             #endregion
 
-            Debug.WriteLine("Connecting to IP " + (string)ipAddress);
+            Debug.WriteLine("Connecting to IP " + ipAddress);
 
             client = new TcpClient((string)ipAddress, 5000);
             //client = new TcpClient(localIP, 5000);
 
-            Thread listenerThread = new Thread(Send);
+            Thread listenerThread = new Thread(Listen);
             listenerThread.Start();
-
-            Thread senderThread = new Thread(Listen);
-            senderThread.Start();
-
-            senderThread.Join();
-            listenerThread.Join();
+            ml = messageList;
+            
         }
 
         public void Listen()
         {
-
-
             string message = "";
 
             try
@@ -60,48 +56,42 @@ namespace WebSounds.Networking
                 {
                     NetworkStream n = client.GetStream();
                     message = new BinaryReader(n).ReadString();
-                    
-                    Console.WriteLine("Other: " + message);
+
+                    //var chat = Application.OpenForms["Form1"].Controls["lbChat"] as ListBox;
+                    ml.Add(message);
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Debug.WriteLine(ex.Message);
             }
         }
 
-        public void Send()
+        public void Send(string message)
         {
-            string message = "";
-            TextBox textBox = Application.OpenForms["Form1"].Controls["tbMessage"] as TextBox;
-
             try
             {
                 NetworkStream n = client.GetStream();
 
-                while (!message.Equals("quit"))
+                if (!(message == ""))
                 {
-                    Thread.Sleep(1000);
-                    
-                    message = textBox.Text;
-
-                    if (!(message == ""))
-                    {
-                        Debug.WriteLine(message);
-                        BinaryWriter w = new BinaryWriter(n);
-                        w.Write(message);
-                        w.Flush();
-                    }
+                    Debug.WriteLine(message);
+                    BinaryWriter w = new BinaryWriter(n);
+                    w.Write(message);
+                    w.Flush();
                 }
 
-                client.Close();
+                if (message.Equals("quit"))
+                {
+                    client.Close();
+                }
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Debug.WriteLine(ex.Message);
             }
         }
-        
+
 
     }
 }
