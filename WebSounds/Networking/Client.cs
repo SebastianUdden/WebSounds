@@ -15,10 +15,10 @@ namespace WebSounds.Networking
     public class Client
     {
         private TcpClient client;
-        //public ListBox lb;
+        public ListBox listBox;
         public List<string> ml;
 
-        public Client(string ipAddress, List<string> messageList)
+        public Client(string ipAddress, ListBox lb)
         {
             #region Get local IP
             //IPHostEntry host;
@@ -42,7 +42,7 @@ namespace WebSounds.Networking
 
             Thread listenerThread = new Thread(Listen);
             listenerThread.Start();
-            ml = messageList;
+            listBox = lb;
         }
 
         public void Listen()
@@ -57,7 +57,7 @@ namespace WebSounds.Networking
                     message = new BinaryReader(n).ReadString();
 
                     //var chat = Application.OpenForms["Form1"].Controls["lbChat"] as ListBox;
-                    ml.Add(message);
+                    listBox.Items.Add(message);
                 }
             }
             catch (Exception ex)

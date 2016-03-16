@@ -30,8 +30,8 @@ namespace WebSounds
 
         static void StartClient(string ipAddress)
         {
-            //var listBox = Application.OpenForms["Form1"].Controls["lbChat"] as ListBox;
-            myClient = new Client(ipAddress, messages);
+            var listBox = Application.OpenForms["Form1"].Controls["lbChat"] as ListBox;
+            myClient = new Client(ipAddress, listBox);
         }
 
         private void bSendMessage_Click(object sender, EventArgs e)
