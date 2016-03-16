@@ -13,6 +13,7 @@ using WebSounds.Networking;
 using System.Media;
 using WMPLib;
 using AxWMPLib;
+using System.Windows.Media.Mediaplayer;
 
 namespace WebSounds
 {
@@ -64,7 +65,26 @@ namespace WebSounds
 
         private void bKick_Click(object sender, EventArgs e)
         {
-            kickHit.LoadAsync();
+            const bool loopPlayer = true;
+            if (label30.Text == "Waiting 15.wav")
+            {
+                MessageBox.Show("No beat loaded");
+                return;
+            }
+            var player = new System.Windows.Media.MediaPlayer();
+            try
+            {
+                player.Open(new Uri(label51.Text));
+                if (loopPlayer)
+                    player.MediaEnded += MediaPlayer_Loop;
+                player.Play();
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("File has been moved." + "\n" + "Please relocate it now!");
+            }
+
+            //@"C:\Users\Administrator\Source\Repos\WebSounds\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Kick - House.wav";
         }
         void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
