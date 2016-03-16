@@ -91,6 +91,25 @@ namespace WebSounds.Networking
             }
         }
 
+        public void SendMusicKey(string keyChar)
+        {
+            try
+            {
+                NetworkStream n = client.GetStream();
 
+                if (!(string.IsNullOrEmpty(keyChar)))
+                {
+                    Debug.WriteLine(keyChar);
+                    BinaryWriter w = new BinaryWriter(n);
+                    w.Write(keyChar);
+                    w.Flush();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
     }
 }
