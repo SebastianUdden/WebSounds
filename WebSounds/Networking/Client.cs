@@ -50,8 +50,6 @@ namespace WebSounds.Networking
 
         public void Listen()
         {
-
-
             string message = "";
 
             try
