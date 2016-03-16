@@ -54,7 +54,7 @@
             // 
             // rtbChat
             // 
-            this.rtbChat.Location = new System.Drawing.Point(8, 201);
+            this.rtbChat.Location = new System.Drawing.Point(12, 132);
             this.rtbChat.Name = "rtbChat";
             this.rtbChat.Size = new System.Drawing.Size(162, 207);
             this.rtbChat.TabIndex = 2;
@@ -62,14 +62,14 @@
             // 
             // tbMessage
             // 
-            this.tbMessage.Location = new System.Drawing.Point(12, 134);
+            this.tbMessage.Location = new System.Drawing.Point(12, 354);
             this.tbMessage.Name = "tbMessage";
-            this.tbMessage.Size = new System.Drawing.Size(170, 20);
+            this.tbMessage.Size = new System.Drawing.Size(162, 20);
             this.tbMessage.TabIndex = 3;
             // 
             // bSendMessage
             // 
-            this.bSendMessage.Location = new System.Drawing.Point(12, 161);
+            this.bSendMessage.Location = new System.Drawing.Point(13, 380);
             this.bSendMessage.Name = "bSendMessage";
             this.bSendMessage.Size = new System.Drawing.Size(75, 23);
             this.bSendMessage.TabIndex = 4;
@@ -81,7 +81,7 @@
             this.lIPaddress.AutoSize = true;
             this.lIPaddress.Location = new System.Drawing.Point(13, 37);
             this.lIPaddress.Name = "lIPaddress";
-            this.lIPaddress.Size = new System.Drawing.Size(58, 13);
+            this.lIPaddress.Size = new System.Drawing.Size(65, 15);
             this.lIPaddress.TabIndex = 5;
             this.lIPaddress.Text = "IP Address";
             // 
