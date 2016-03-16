@@ -14,9 +14,12 @@ namespace WebSounds
 {
     public partial class Form1 : Form
     {
+        public static Client myClient;
+        public static List<string> messages;
         public Form1()
         {
             InitializeComponent();
+            messages = new List<string>();
         }
 
         private void bConnect_Click(object sender, EventArgs e)
@@ -26,16 +29,24 @@ namespace WebSounds
 
         static void StartClient(string ipAddress)
         {
-            var myClient = new Client();
-
-            Thread clientThread = new Thread(myClient.Start);
-            clientThread.Start(ipAddress);
-            //clientThread.Join();
+            //var listBox = Application.OpenForms["Form1"].Controls["lbChat"] as ListBox;
+            myClient = new Client(ipAddress, messages);
         }
 
         private void bSendMessage_Click(object sender, EventArgs e)
         {
-            
+            myClient.Send(tbMessage.Text);
+
+            Thread.Sleep(50);
+            foreach (var message in messages)
+            {
+                lbChat.Items.Add(message);
+            }
         }
+
+        //private void listGrow ()
+        //{
+
+        //}
     }
 }

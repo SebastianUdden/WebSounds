@@ -30,10 +30,10 @@
         {
             this.tbIP = new System.Windows.Forms.TextBox();
             this.bConnect = new System.Windows.Forms.Button();
-            this.rtbChat = new System.Windows.Forms.RichTextBox();
             this.tbMessage = new System.Windows.Forms.TextBox();
             this.bSendMessage = new System.Windows.Forms.Button();
             this.lIPaddress = new System.Windows.Forms.Label();
+            this.lbChat = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // tbIP
@@ -53,14 +53,6 @@
             this.bConnect.Text = "Connect";
             this.bConnect.UseVisualStyleBackColor = true;
             this.bConnect.Click += new System.EventHandler(this.bConnect_Click);
-            // 
-            // rtbChat
-            // 
-            this.rtbChat.Location = new System.Drawing.Point(12, 132);
-            this.rtbChat.Name = "rtbChat";
-            this.rtbChat.Size = new System.Drawing.Size(348, 207);
-            this.rtbChat.TabIndex = 2;
-            this.rtbChat.Text = "";
             // 
             // tbMessage
             // 
@@ -84,19 +76,27 @@
             this.lIPaddress.AutoSize = true;
             this.lIPaddress.Location = new System.Drawing.Point(13, 37);
             this.lIPaddress.Name = "lIPaddress";
-            this.lIPaddress.Size = new System.Drawing.Size(58, 13);
+            this.lIPaddress.Size = new System.Drawing.Size(65, 15);
             this.lIPaddress.TabIndex = 5;
             this.lIPaddress.Text = "IP Address";
+            // 
+            // lbChat
+            // 
+            this.lbChat.FormattingEnabled = true;
+            this.lbChat.Location = new System.Drawing.Point(13, 112);
+            this.lbChat.Name = "lbChat";
+            this.lbChat.Size = new System.Drawing.Size(347, 225);
+            this.lbChat.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 435);
+            this.Controls.Add(this.lbChat);
             this.Controls.Add(this.lIPaddress);
             this.Controls.Add(this.bSendMessage);
             this.Controls.Add(this.tbMessage);
-            this.Controls.Add(this.rtbChat);
             this.Controls.Add(this.bConnect);
             this.Controls.Add(this.tbIP);
             this.Name = "Form1";
@@ -110,10 +110,10 @@
 
         private System.Windows.Forms.TextBox tbIP;
         private System.Windows.Forms.Button bConnect;
-        private System.Windows.Forms.RichTextBox rtbChat;
         private System.Windows.Forms.TextBox tbMessage;
         private System.Windows.Forms.Button bSendMessage;
         private System.Windows.Forms.Label lIPaddress;
+        private System.Windows.Forms.ListBox lbChat;
     }
 }
 
