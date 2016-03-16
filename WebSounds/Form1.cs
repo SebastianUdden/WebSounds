@@ -5,8 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebSounds.Networking;
 
 namespace WebSounds
 {
@@ -19,7 +21,16 @@ namespace WebSounds
 
         private void bConnect_Click(object sender, EventArgs e)
         {
+            StartClient(tbIP.Text.Trim());
+        }
 
+        static void StartClient(string ipAddress)
+        {
+            var myClient = new Client();
+
+            Thread clientThread = new Thread(myClient.Start);
+            clientThread.Start(ipAddress);
+            clientThread.Join();
         }
     }
 }

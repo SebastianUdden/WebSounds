@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -14,7 +15,7 @@ namespace WebSounds.Networking
     {
         private TcpClient client;
 
-        public void Start()
+        public void Start(Object ipAddress)
         {
             #region Get local IP
             IPHostEntry host;
@@ -31,7 +32,9 @@ namespace WebSounds.Networking
             Console.WriteLine($"IP: {localIP}");
             #endregion
 
-            client = new TcpClient("192.168.20.114", 5000);
+            Debug.WriteLine("Connecting to IP " + (string)ipAddress);
+
+            client = new TcpClient((string)ipAddress, 5000);
             //client = new TcpClient(localIP, 5000);
 
             Thread listenerThread = new Thread(Send);
