@@ -49,7 +49,7 @@
             this.tbIP.Name = "tbIP";
             this.tbIP.Size = new System.Drawing.Size(163, 20);
             this.tbIP.TabIndex = 0;
-            this.tbIP.Text = "192.168.220.97";
+            this.tbIP.Text = "192.168.220.89";
             // 
             // bConnect
             // 
@@ -119,7 +119,7 @@
             // 
             this.mpBasic.Enabled = true;
             this.mpBasic.Location = new System.Drawing.Point(566, 267);
-            this.mpBasic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mpBasic.Margin = new System.Windows.Forms.Padding(2);
             this.mpBasic.Name = "mpBasic";
             this.mpBasic.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mpBasic.OcxState")));
             this.mpBasic.Size = new System.Drawing.Size(239, 191);
