@@ -60,6 +60,7 @@ namespace WebSounds.Networking
                 {
                     NetworkStream n = client.GetStream();
                     message = new BinaryReader(n).ReadString();
+                    
                     Console.WriteLine("Other: " + message);
                 }
             }
