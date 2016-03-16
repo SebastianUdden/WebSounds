@@ -57,7 +57,7 @@
             // 
             this.rtbChat.Location = new System.Drawing.Point(12, 132);
             this.rtbChat.Name = "rtbChat";
-            this.rtbChat.Size = new System.Drawing.Size(162, 207);
+            this.rtbChat.Size = new System.Drawing.Size(348, 207);
             this.rtbChat.TabIndex = 2;
             this.rtbChat.Text = "";
             // 
@@ -65,7 +65,7 @@
             // 
             this.tbMessage.Location = new System.Drawing.Point(12, 354);
             this.tbMessage.Name = "tbMessage";
-            this.tbMessage.Size = new System.Drawing.Size(162, 20);
+            this.tbMessage.Size = new System.Drawing.Size(348, 20);
             this.tbMessage.TabIndex = 3;
             // 
             // bSendMessage
@@ -76,13 +76,14 @@
             this.bSendMessage.TabIndex = 4;
             this.bSendMessage.Text = "Send";
             this.bSendMessage.UseVisualStyleBackColor = true;
+            this.bSendMessage.Click += new System.EventHandler(this.bSendMessage_Click);
             // 
             // lIPaddress
             // 
             this.lIPaddress.AutoSize = true;
             this.lIPaddress.Location = new System.Drawing.Point(13, 37);
             this.lIPaddress.Name = "lIPaddress";
-            this.lIPaddress.Size = new System.Drawing.Size(65, 15);
+            this.lIPaddress.Size = new System.Drawing.Size(58, 13);
             this.lIPaddress.TabIndex = 5;
             this.lIPaddress.Text = "IP Address";
             // 
@@ -90,7 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 435);
+            this.ClientSize = new System.Drawing.Size(379, 435);
             this.Controls.Add(this.lIPaddress);
             this.Controls.Add(this.bSendMessage);
             this.Controls.Add(this.tbMessage);

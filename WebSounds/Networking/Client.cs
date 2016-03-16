@@ -8,6 +8,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace WebSounds.Networking
 {
@@ -49,6 +50,8 @@ namespace WebSounds.Networking
 
         public void Listen()
         {
+
+
             string message = "";
 
             try
@@ -69,6 +72,7 @@ namespace WebSounds.Networking
         public void Send()
         {
             string message = "";
+            TextBox textBox = Application.OpenForms["Form1"].Controls["tbMessage"] as TextBox;
 
             try
             {
@@ -76,10 +80,17 @@ namespace WebSounds.Networking
 
                 while (!message.Equals("quit"))
                 {
-                    message = Console.ReadLine();
-                    BinaryWriter w = new BinaryWriter(n);
-                    w.Write(message);
-                    w.Flush();
+                    Thread.Sleep(1000);
+                    
+                    message = textBox.Text;
+
+                    if (!(message == ""))
+                    {
+                        Debug.WriteLine(message);
+                        BinaryWriter w = new BinaryWriter(n);
+                        w.Write(message);
+                        w.Flush();
+                    }
                 }
 
                 client.Close();
@@ -89,6 +100,7 @@ namespace WebSounds.Networking
                 Console.WriteLine(ex.Message);
             }
         }
+        
 
     }
 }

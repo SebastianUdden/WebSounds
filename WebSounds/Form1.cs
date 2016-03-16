@@ -30,7 +30,12 @@ namespace WebSounds
 
             Thread clientThread = new Thread(myClient.Start);
             clientThread.Start(ipAddress);
-            clientThread.Join();
+            //clientThread.Join();
+        }
+
+        private void bSendMessage_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
