@@ -20,6 +20,7 @@ namespace WebSounds
         {
             InitializeComponent();
             messages = new List<string>();
+            ListBox.CheckForIllegalCrossThreadCalls = false;
         }
 
         private void bConnect_Click(object sender, EventArgs e)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -57,6 +58,7 @@ namespace WebSoundsServer
             {
                 foreach (ClientHandler tmpClient in clients)
                 {
+
                     if (tmpClient != client)
                     {
                         NetworkStream n = tmpClient.tcpclient.GetStream();
@@ -68,7 +70,7 @@ namespace WebSoundsServer
                     {
                         NetworkStream n = tmpClient.tcpclient.GetStream();
                         BinaryWriter w = new BinaryWriter(n);
-                        w.Write("Sorry, you are alone...");
+                        w.Write(message);
                         w.Flush();
                     }
                 }
