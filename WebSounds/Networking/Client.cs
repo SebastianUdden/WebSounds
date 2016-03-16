@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace LiveJammin.Networking
+namespace WebSounds.Networking
 {
     public class Client
     {
