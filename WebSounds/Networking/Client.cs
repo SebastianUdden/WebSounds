@@ -13,9 +13,15 @@ using WebSounds.Networking;
 using System.Media;
 using WMPLib;
 using AxWMPLib;
+using WebSounds.Instruments;
+using WebSounds.Instruments.Drumkit;
+
+enum instrumentNumbers { drumkit, piano }
+
 
 namespace WebSounds.Networking
 {
+
     public class Client
     {
         private TcpClient client;
@@ -25,6 +31,7 @@ namespace WebSounds.Networking
         List<AxWindowsMediaPlayer> hiHats;
         List<AxWindowsMediaPlayer> snares;
         List<AxWindowsMediaPlayer> kicks;
+        List<Instrument> instruments;
 
         public Client(string ipAddress, ListBox lb)
         {
@@ -52,29 +59,11 @@ namespace WebSounds.Networking
             listenerThread.Start();
             listBox = lb;
 
-            hiHats = new List<AxWindowsMediaPlayer>();
-            for(int i = 0; i < 20; i++)
-            {
-                hiHats.Add(new AxWindowsMediaPlayer());
-                hiHats[i].CreateControl();
-                hiHats[i].URL = @"C:\Users\Administrator\Source\Repos\WebSounds3\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Hihat 2 - Echoed.wav";
-            }
+            instruments = new List<Instrument>();
+            instruments.Add(new Drumkit());
 
-            snares = new List<AxWindowsMediaPlayer>();
-            for (int i = 0; i < 20; i++)
-            {
-                snares.Add(new AxWindowsMediaPlayer());
-                snares[i].CreateControl();
-                snares[i].URL = @"C:\Users\Administrator\Source\Repos\WebSounds3\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Snare - House.wav";
-            }
 
-            kicks = new List<AxWindowsMediaPlayer>();
-            for (int i = 0; i < 20; i++)
-            {
-                kicks.Add(new AxWindowsMediaPlayer());
-                kicks[i].CreateControl();
-                kicks[i].URL = @"C:\Users\Administrator\Source\Repos\WebSounds3\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Kick - House.wav";
-            }
+
 
         }
 
@@ -97,13 +86,13 @@ namespace WebSounds.Networking
                         switch (message.Substring(5, 1))
                         {
                             case "a":
-                                hiHats[counter].Ctlcontrols.play();
+                                instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.kick][counter].Ctlcontrols.play();
                                 break;
                             case "w":
-                                snares[counter].Ctlcontrols.play();
+                                instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.Snare][counter].Ctlcontrols.play();
                                 break;
                             case "s":
-                                kicks[counter].Ctlcontrols.play();
+                                instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.hiHat][counter].Ctlcontrols.play();
                                 break;
                             case "d":
                                 break;
@@ -111,7 +100,7 @@ namespace WebSounds.Networking
 
                         counter++;
 
-                        if (counter > 19)
+                        if (counter >= instruments[0].Threads)
                             counter = 0; 
 
                     }
