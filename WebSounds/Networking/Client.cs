@@ -86,28 +86,66 @@ namespace WebSounds.Networking
                         switch (message.Substring(6, 1))
                         {
                             case "a":
-                                instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.kick][counter].Ctlcontrols.play();
-                                break;
-                            case "w":
-                                instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.Snare][counter].Ctlcontrols.play();
-                                break;
-                            case "s":
-                                instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.hiHat][counter].Ctlcontrols.play();
-                                break;
-                            case "d":
                                 piano[counter].Notes[(int)pianoNotes.A][octave].Ctlcontrols.play();
                                 break;
+                            case "w":
+                                piano[counter].Notes[(int)pianoNotes.Bb][octave].Ctlcontrols.play();
+                                break;
+                            case "s":
+                                piano[counter].Notes[(int)pianoNotes.B][octave].Ctlcontrols.play();
+                                break;
+                            case "e":
+                                piano[counter].Notes[(int)pianoNotes.C][octave].Ctlcontrols.play();
+                                break;
+                            case "d":
+                                piano[counter].Notes[(int)pianoNotes.Db][octave].Ctlcontrols.play();
+                                break;
+                            case "f":
+                                piano[counter].Notes[(int)pianoNotes.D][octave].Ctlcontrols.play();
+                                break;
                             case "t":
-                                instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.kick][counter].Ctlcontrols.play();
+                                piano[counter].Notes[(int)pianoNotes.Eb][octave].Ctlcontrols.play();
+                                break;
+                            case "g":
+                                piano[counter].Notes[(int)pianoNotes.E][octave].Ctlcontrols.play();
                                 break;
                             case "y":
-                                instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.Snare][counter].Ctlcontrols.play();
+                                piano[counter].Notes[(int)pianoNotes.F][octave].Ctlcontrols.play();
+                                break;
+                            case "h":
+                                piano[counter].Notes[(int)pianoNotes.Gb][octave].Ctlcontrols.play();
                                 break;
                             case "u":
-                                instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.hiHat][counter].Ctlcontrols.play();
+                                piano[counter].Notes[(int)pianoNotes.G][octave].Ctlcontrols.play();
                                 break;
-                            case "i":
+                            case "j":
+                                piano[counter].Notes[(int)pianoNotes.Ab][octave].Ctlcontrols.play();
                                 break;
+
+                                /*
+                                case "a":
+                                    instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.kick][counter].Ctlcontrols.play();
+                                    break;
+                                case "w":
+                                    instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.Snare][counter].Ctlcontrols.play();
+                                    break;
+                                case "s":
+                                    instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.hiHat][counter].Ctlcontrols.play();
+                                    break;
+                                case "d":
+                                    piano[counter].Notes[(int)pianoNotes.A][octave].Ctlcontrols.play();
+                                    break;
+                                case "t":
+                                    instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.kick][counter].Ctlcontrols.play();
+                                    break;
+                                case "y":
+                                    instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.Snare][counter].Ctlcontrols.play();
+                                    break;
+                                case "u":
+                                    instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.hiHat][counter].Ctlcontrols.play();
+                                    break;
+                                case "i":
+                                    break;*/
                         }
 
                         counter++;
