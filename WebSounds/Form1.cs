@@ -76,11 +76,6 @@ namespace WebSounds
             }
         }
 
-        private void bKick_Click(object sender, EventArgs e)
-        {
-
-        }
-
         void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
             int octave = 0;
@@ -137,18 +132,63 @@ namespace WebSounds
 
         private void btnC_Click(object sender, EventArgs e)
         {
-            btnC.BackColor = Color.Blue;
-
-            if (btnC.BackColor == Color.Blue)
-            {
-                Sleep();
-            }
+            myClient.Send("c");
+            //btnC.BackColor = Color.Blue;
         }
 
-        private void Sleep()
+        private void btnDb_Click(object sender, EventArgs e)
         {
-            Thread.Sleep(1000);
-            btnC.BackColor = Color.White;
+
+        }
+
+        private void btnD_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnE_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnF_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnG_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnB_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
