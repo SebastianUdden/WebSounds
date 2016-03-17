@@ -32,7 +32,6 @@ namespace WebSounds.Networking
         List<Instrument> instruments;
         List<Piano> piano;
 
-
         public Client(string ipAddress, ListBox lb)
         {
             #region Get local IP
