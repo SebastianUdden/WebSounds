@@ -66,6 +66,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -81,6 +82,36 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\39148__jobro__piano-ff-001.wav" />
+    <None Include="Resources\39149__jobro__piano-ff-002.wav" />
+    <None Include="Resources\39150__jobro__piano-ff-003.wav" />
+    <None Include="Resources\39151__jobro__piano-ff-004.wav" />
+    <None Include="Resources\39152__jobro__piano-ff-005.wav" />
+    <None Include="Resources\39153__jobro__piano-ff-006.wav" />
+    <None Include="Resources\39154__jobro__piano-ff-007.wav" />
+    <None Include="Resources\39155__jobro__piano-ff-008.wav" />
+    <None Include="Resources\39156__jobro__piano-ff-009.wav" />
+    <None Include="Resources\39157__jobro__piano-ff-010.wav" />
+    <None Include="Resources\39158__jobro__piano-ff-011.wav" />
+    <None Include="Resources\39159__jobro__piano-ff-012.wav" />
+    <None Include="Resources\39160__jobro__piano-ff-013.wav" />
+    <None Include="Resources\39161__jobro__piano-ff-014.wav" />
+    <None Include="Resources\39162__jobro__piano-ff-015.wav" />
+    <None Include="Resources\39163__jobro__piano-ff-016.wav" />
+    <None Include="Resources\39164__jobro__piano-ff-017.wav" />
+    <None Include="Resources\39165__jobro__piano-ff-018.wav" />
+    <None Include="Resources\39166__jobro__piano-ff-019.wav" />
+    <None Include="Resources\39167__jobro__piano-ff-020.wav" />
+    <None Include="Resources\39168__jobro__piano-ff-021.wav" />
+    <None Include="Resources\39169__jobro__piano-ff-022.wav" />
+    <None Include="Resources\39170__jobro__piano-ff-023.wav" />
+    <None Include="Resources\39171__jobro__piano-ff-024.wav" />
+    <None Include="Resources\39172__jobro__piano-ff-025.wav" />
+    <None Include="Resources\39173__jobro__piano-ff-026.wav" />
+    <None Include="Resources\39174__jobro__piano-ff-027.wav" />
+    <None Include="Resources\39175__jobro__piano-ff-028.wav" />
+    <None Include="Resources\39176__jobro__piano-ff-029.wav" />
+    <None Include="Resources\39177__jobro__piano-ff-030.wav" />
     <Content Include="Sounds\Instruments\Drums\Drumkit 1\Hihat - open.wav" />
     <Content Include="Sounds\Instruments\Drums\Drumkit 1\Hihat 2 - Echoed.wav" />
     <Content Include="Sounds\Instruments\Drums\Drumkit 1\Kick - House.wav" />
