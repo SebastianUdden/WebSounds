@@ -19,10 +19,8 @@ using WebSounds.Instruments.Piano;
 
 enum instrumentNumbers { drumkit, piano }
 
-
 namespace WebSounds.Networking
 {
-
     public class Client
     {
         private TcpClient client;
@@ -88,16 +86,16 @@ namespace WebSounds.Networking
                         switch (message.Substring(6, 1))
                         {
                             case "a":
-                                piano[counter].Notes[(int)pianoNotes.A][octave].Ctlcontrols.play();
+                                piano[counter].Notes[octave][(int)pianoNotes.A].Ctlcontrols.play();
                                 break;
                             case "w":
-                                piano[counter].Notes[(int)pianoNotes.Bb][octave].Ctlcontrols.play();
+                                piano[counter].Notes[octave][(int)pianoNotes.Bb].Ctlcontrols.play();
                                 break;
                             case "s":
-                                piano[counter].Notes[(int)pianoNotes.B][octave].Ctlcontrols.play();
+                                piano[counter].Notes[octave][(int)pianoNotes.B].Ctlcontrols.play();
                                 break;
                             case "e":
-                                piano[counter].Notes[(int)pianoNotes.C][octave].Ctlcontrols.play();
+                                piano[counter].Notes[octave][(int)pianoNotes.C].Ctlcontrols.play();
                                 break;
                             case "d":
                                 piano[counter].Notes[(int)pianoNotes.Db][octave].Ctlcontrols.play();
