@@ -18,6 +18,7 @@
                 components.Dispose();
             }
             base.Dispose(disposing);
+
         }
 
         #region Windows Form Designer generated code
@@ -28,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tbIP = new System.Windows.Forms.TextBox();
             this.bConnect = new System.Windows.Forms.Button();
             this.tbMessage = new System.Windows.Forms.TextBox();
@@ -36,6 +38,9 @@
             this.lbChat = new System.Windows.Forms.ListBox();
             this.bKick = new System.Windows.Forms.Button();
             this.bSnare = new System.Windows.Forms.Button();
+            this.mpBasic = new AxWMPLib.AxWindowsMediaPlayer();
+            this.cbPlayMusic = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.mpBasic)).BeginInit();
             this.SuspendLayout();
             // 
             // tbIP
@@ -44,7 +49,7 @@
             this.tbIP.Name = "tbIP";
             this.tbIP.Size = new System.Drawing.Size(163, 20);
             this.tbIP.TabIndex = 0;
-            this.tbIP.Text = "192.168.220.97";
+            this.tbIP.Text = "192.168.220.89";
             // 
             // bConnect
             // 
@@ -110,11 +115,34 @@
             this.bSnare.UseVisualStyleBackColor = true;
             this.bSnare.Click += new System.EventHandler(this.bSnare_Click);
             // 
+            // mpBasic
+            // 
+            this.mpBasic.Enabled = true;
+            this.mpBasic.Location = new System.Drawing.Point(566, 267);
+            this.mpBasic.Margin = new System.Windows.Forms.Padding(2);
+            this.mpBasic.Name = "mpBasic";
+            this.mpBasic.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mpBasic.OcxState")));
+            this.mpBasic.Size = new System.Drawing.Size(239, 191);
+            this.mpBasic.TabIndex = 9;
+            // 
+            // cbPlayMusic
+            // 
+            this.cbPlayMusic.AutoSize = true;
+            this.cbPlayMusic.Location = new System.Drawing.Point(283, 87);
+            this.cbPlayMusic.Name = "cbPlayMusic";
+            this.cbPlayMusic.Size = new System.Drawing.Size(77, 17);
+            this.cbPlayMusic.TabIndex = 10;
+            this.cbPlayMusic.Text = "Play Music";
+            this.cbPlayMusic.UseVisualStyleBackColor = true;
+            this.cbPlayMusic.CheckedChanged += new System.EventHandler(this.cbPlayMusic_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 465);
+            this.Controls.Add(this.cbPlayMusic);
+            this.Controls.Add(this.mpBasic);
             this.Controls.Add(this.bSnare);
             this.Controls.Add(this.bKick);
             this.Controls.Add(this.lbChat);
@@ -123,9 +151,9 @@
             this.Controls.Add(this.tbMessage);
             this.Controls.Add(this.bConnect);
             this.Controls.Add(this.tbIP);
-            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.mpBasic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,6 +169,8 @@
         private System.Windows.Forms.ListBox lbChat;
         private System.Windows.Forms.Button bKick;
         private System.Windows.Forms.Button bSnare;
+        private AxWMPLib.AxWindowsMediaPlayer mpBasic;
+        private System.Windows.Forms.CheckBox cbPlayMusic;
     }
 }
 
