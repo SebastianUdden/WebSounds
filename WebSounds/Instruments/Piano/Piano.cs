@@ -44,7 +44,7 @@ namespace WebSounds.Instruments.Piano
                 new List<AxWindowsMediaPlayer>()
             };
 
-            Debug.WriteLine("generating sounds");
+            Debug.WriteLine("generating piano sounds");
 
             for (int i = 0; i< octaves; i++)
             {
