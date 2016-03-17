@@ -56,6 +56,7 @@
     </Compile>
     <Compile Include="Instruments\Drumkit\Drumkit.cs" />
     <Compile Include="Instruments\Instrument.cs" />
+    <Compile Include="Instruments\Piano\Piano.cs" />
     <Compile Include="Networking\Client.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

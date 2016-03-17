@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WebSounds.Networking;
 using System.Threading;
+using System.Diagnostics;
+using System.IO;
 
 namespace WebSounds
 {
