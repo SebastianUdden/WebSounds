@@ -87,6 +87,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Instruments\Synths\Loops\Pads\synth-pad-star-waves.wav" />
     <Content Include="Sounds\Instruments\Drums\Drumkit 1\Hihat - open.wav" />
     <Content Include="Sounds\Instruments\Drums\Drumkit 1\Hihat 2 - Echoed.wav" />
     <Content Include="Sounds\Instruments\Drums\Drumkit 1\Kick - House.wav" />
