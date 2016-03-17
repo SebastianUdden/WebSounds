@@ -60,7 +60,7 @@ namespace WebSounds.Networking
             instruments.Add(new Drumkit());
 
             piano = new List<Piano>();
-            for(int i = 0; i< instruments[0].Threads; i++)
+            for (int i = 0; i < instruments[0].Threads; i++)
                 piano.Add(new Piano());
         }
 
@@ -78,7 +78,7 @@ namespace WebSounds.Networking
                     NetworkStream n = client.GetStream();
                     message = new BinaryReader(n).ReadString();
 
-                    if (message.Substring(0, 5) == "music")
+                    if (message.Substring(0, 5) == "piano")
                     {
                         if (int.TryParse(message.Substring(5, 1), out octave) == false)
                             throw new Exception("Could not parse");
@@ -121,38 +121,30 @@ namespace WebSounds.Networking
                             case "j":
                                 piano[counter].Notes[octave][(int)pianoNotes.Ab].Ctlcontrols.play();
                                 break;
-
-                                /*
-                                case "a":
-                                    instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.kick][counter].Ctlcontrols.play();
-                                    break;
-                                case "w":
-                                    instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.Snare][counter].Ctlcontrols.play();
-                                    break;
-                                case "s":
-                                    instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.hiHat][counter].Ctlcontrols.play();
-                                    break;
-                                case "d":
-                                    piano[counter].Notes[(int)pianoNotes.A][octave].Ctlcontrols.play();
-                                    break;
-                                case "t":
-                                    instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.kick][counter].Ctlcontrols.play();
-                                    break;
-                                case "y":
-                                    instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.Snare][counter].Ctlcontrols.play();
-                                    break;
-                                case "u":
-                                    instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.hiHat][counter].Ctlcontrols.play();
-                                    break;
-                                case "i":
-                                    break;*/
                         }
-
                         counter++;
 
                         if (counter >= instruments[0].Threads)
-                            counter = 0; 
+                            counter = 0;
+                    }
+                    else if (message.Substring(0, 5) == "drums")
+                    {
+                        switch (message.Substring(5, 1))
+                        {
+                            case "a":
+                                instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.kick][counter].Ctlcontrols.play();
+                                break;
+                            case "w":
+                                instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.Snare][counter].Ctlcontrols.play();
+                                break;
+                            case "s":
+                                instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.hiHat][counter].Ctlcontrols.play();
+                                break;
+                        }
+                        counter++;
 
+                        if (counter >= instruments[0].Threads)
+                            counter = 0;
                     }
                     else
                         listBox.Items.Add("Anonymous: " + message);
