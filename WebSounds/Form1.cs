@@ -24,6 +24,7 @@ namespace WebSounds
         public static SoundPlayer snareHit;
         public static SoundPlayer hiHatHit;
         public static List<AxWindowsMediaPlayer> Drumkit1;
+        public string instrument; 
 
         public Form1()
         {
@@ -92,7 +93,15 @@ namespace WebSounds
                 octave = 1;
 
             Debug.WriteLine("Key pressed: " + e.KeyChar);
-            myClient.SendMusicKey("music"+ octave.ToString() + e.KeyChar.ToString());
+
+            if (instrument == "drums")
+                myClient.SendMusicKey(instrument + e.KeyChar.ToString());
+            else if (instrument == "piano")
+                myClient.SendMusicKey(instrument + octave.ToString() + e.KeyChar.ToString());
+            else
+                throw new Exception("No instrument");
+
+
         }
 
 
@@ -101,17 +110,31 @@ namespace WebSounds
             snareHit.LoadAsync();
         }
 
-        private void cbPlayMusic_CheckedChanged(object sender, EventArgs e)
+        private void cbPlayDrums_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbPlayMusic.Checked == true)
+            if (cbPlayDrums.Checked == true)
+            {
                 KeyPreview = true;
-            else
+                instrument = "drums";
+                cbPlayPiano.Checked = false;
+            }
+
+            if(cbPlayDrums.Checked == false && cbPlayPiano.Checked == false)
                 KeyPreview = false;
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
 
+        private void cbPlayPiano_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbPlayPiano.Checked == true)
+            {
+                KeyPreview = true;
+                instrument = "piano";
+                cbPlayDrums.Checked = false;
+            }
+
+            if (cbPlayDrums.Checked == false && cbPlayPiano.Checked == false)
+                KeyPreview = false;
         }
     }
 }

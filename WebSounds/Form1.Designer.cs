@@ -37,10 +37,11 @@
             this.lIPaddress = new System.Windows.Forms.Label();
             this.lbChat = new System.Windows.Forms.ListBox();
             this.mpBasic = new AxWMPLib.AxWindowsMediaPlayer();
-            this.cbPlayMusic = new System.Windows.Forms.CheckBox();
+            this.cbPlayDrums = new System.Windows.Forms.CheckBox();
             this.rbMiddleOctave = new System.Windows.Forms.RadioButton();
             this.rbHighOctave = new System.Windows.Forms.RadioButton();
             this.rbLowOctave = new System.Windows.Forms.RadioButton();
+            this.cbPlayPiano = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.mpBasic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,16 +107,16 @@
             this.mpBasic.Size = new System.Drawing.Size(239, 191);
             this.mpBasic.TabIndex = 9;
             // 
-            // cbPlayMusic
+            // cbPlayDrums
             // 
-            this.cbPlayMusic.AutoSize = true;
-            this.cbPlayMusic.Location = new System.Drawing.Point(283, 87);
-            this.cbPlayMusic.Name = "cbPlayMusic";
-            this.cbPlayMusic.Size = new System.Drawing.Size(77, 17);
-            this.cbPlayMusic.TabIndex = 10;
-            this.cbPlayMusic.Text = "Play Music";
-            this.cbPlayMusic.UseVisualStyleBackColor = true;
-            this.cbPlayMusic.CheckedChanged += new System.EventHandler(this.cbPlayMusic_CheckedChanged);
+            this.cbPlayDrums.AutoSize = true;
+            this.cbPlayDrums.Location = new System.Drawing.Point(199, 83);
+            this.cbPlayDrums.Name = "cbPlayDrums";
+            this.cbPlayDrums.Size = new System.Drawing.Size(79, 17);
+            this.cbPlayDrums.TabIndex = 10;
+            this.cbPlayDrums.Text = "Play Drums";
+            this.cbPlayDrums.UseVisualStyleBackColor = true;
+            this.cbPlayDrums.CheckedChanged += new System.EventHandler(this.cbPlayDrums_CheckedChanged);
             // 
             // rbMiddleOctave
             // 
@@ -149,16 +150,27 @@
             this.rbLowOctave.TabStop = true;
             this.rbLowOctave.Text = "Low Octave";
             this.rbLowOctave.UseVisualStyleBackColor = true;
-            this.rbLowOctave.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // cbPlayPiano
+            // 
+            this.cbPlayPiano.AutoSize = true;
+            this.cbPlayPiano.Location = new System.Drawing.Point(284, 83);
+            this.cbPlayPiano.Name = "cbPlayPiano";
+            this.cbPlayPiano.Size = new System.Drawing.Size(76, 17);
+            this.cbPlayPiano.TabIndex = 14;
+            this.cbPlayPiano.Text = "Play Piano";
+            this.cbPlayPiano.UseVisualStyleBackColor = true;
+            this.cbPlayPiano.CheckedChanged += new System.EventHandler(this.cbPlayPiano_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 465);
+            this.Controls.Add(this.cbPlayPiano);
             this.Controls.Add(this.rbLowOctave);
             this.Controls.Add(this.rbHighOctave);
-            this.Controls.Add(this.cbPlayMusic);
+            this.Controls.Add(this.cbPlayDrums);
             this.Controls.Add(this.rbMiddleOctave);
             this.Controls.Add(this.mpBasic);
             this.Controls.Add(this.lbChat);
@@ -184,10 +196,11 @@
         private System.Windows.Forms.Label lIPaddress;
         private System.Windows.Forms.ListBox lbChat;
         private AxWMPLib.AxWindowsMediaPlayer mpBasic;
-        private System.Windows.Forms.CheckBox cbPlayMusic;
+        private System.Windows.Forms.CheckBox cbPlayDrums;
         private System.Windows.Forms.RadioButton rbMiddleOctave;
         private System.Windows.Forms.RadioButton rbHighOctave;
         private System.Windows.Forms.RadioButton rbLowOctave;
+        private System.Windows.Forms.CheckBox cbPlayPiano;
     }
 }
 
