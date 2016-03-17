@@ -30,7 +30,7 @@ namespace WebSounds.Networking
         public List<string> ml;
 
         List<Instrument> instruments;
-        Piano piano;
+        List<Piano> piano;
 
 
         public Client(string ipAddress, ListBox lb)
@@ -62,7 +62,9 @@ namespace WebSounds.Networking
             instruments = new List<Instrument>();
             instruments.Add(new Drumkit());
 
-            piano = new Piano();
+            piano = new List<Piano>();
+            for(int i = 0; i< instruments[0].Threads; i++)
+                piano.Add(new Piano());
         }
 
         public void Listen()
@@ -93,7 +95,7 @@ namespace WebSounds.Networking
                                 instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.hiHat][counter].Ctlcontrols.play();
                                 break;
                             case "d":
-                                piano.Notes[3][0].Ctlcontrols.play();
+                                piano[counter].Notes[(int)pianoNotes.A][]
                                 break;
                             case "t":
                                 instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.kick][counter].Ctlcontrols.play();

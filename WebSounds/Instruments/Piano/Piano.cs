@@ -46,14 +46,16 @@ namespace WebSounds.Instruments.Piano
 
             Debug.WriteLine("generating sounds");
 
-            for (int i = 0; i< octaves; i++)
-            {
-                for(int j = 0; j< notePerOctave; j++)
+            for(int k = 0; k< Threads; k++)
+            { 
+                for (int i = 0; i< octaves; i++)
                 {
-                    Notes[i].Add(new AxWindowsMediaPlayer());
-                    Notes[i].Last().CreateControl();
-                    Notes[i].Last().URL = Directory.GetCurrentDirectory() + @"\Sounds\Instruments\Piano\" + pianoNotes[j] + i.ToString() + ".wav";
-                    Debug.WriteLine(Directory.GetCurrentDirectory() + @"\Sounds\Instruments\Piano\" + pianoNotes[j] + i.ToString() + ".wav");
+                    for(int j = 0; j< notePerOctave; j++)
+                    {
+                        Notes[i].Add(new AxWindowsMediaPlayer());
+                        Notes[i].Last().CreateControl();
+                        Notes[i].Last().URL = Directory.GetCurrentDirectory() + @"\Sounds\Instruments\Piano\" + pianoNotes[j] + i.ToString() + ".wav";
+                    }
                 }
             }
         }
