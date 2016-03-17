@@ -15,6 +15,7 @@ using WMPLib;
 using AxWMPLib;
 using WebSounds.Instruments;
 using WebSounds.Instruments.Drumkit;
+using WebSounds.Instruments.Piano;
 
 enum instrumentNumbers { drumkit, piano }
 
@@ -28,10 +29,9 @@ namespace WebSounds.Networking
         public ListBox listBox;
         public List<string> ml;
 
-        List<AxWindowsMediaPlayer> hiHats;
-        List<AxWindowsMediaPlayer> snares;
-        List<AxWindowsMediaPlayer> kicks;
         List<Instrument> instruments;
+        Piano piano;
+
 
         public Client(string ipAddress, ListBox lb)
         {
@@ -62,9 +62,7 @@ namespace WebSounds.Networking
             instruments = new List<Instrument>();
             instruments.Add(new Drumkit());
 
-
-
-
+            piano = new Piano();
         }
 
         public void Listen()
@@ -95,6 +93,18 @@ namespace WebSounds.Networking
                                 instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.hiHat][counter].Ctlcontrols.play();
                                 break;
                             case "d":
+                                piano.Notes[3][0].Ctlcontrols.play();
+                                break;
+                            case "t":
+                                instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.kick][counter].Ctlcontrols.play();
+                                break;
+                            case "y":
+                                instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.Snare][counter].Ctlcontrols.play();
+                                break;
+                            case "u":
+                                instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.hiHat][counter].Ctlcontrols.play();
+                                break;
+                            case "i":
                                 break;
                         }
 

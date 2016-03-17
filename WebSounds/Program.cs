@@ -7,6 +7,7 @@ using WebSounds.Networking;
 using System.Threading;
 using System.Diagnostics;
 using System.IO;
+using WebSounds.Instruments.Piano;
 
 namespace WebSounds
 {
@@ -18,9 +19,14 @@ namespace WebSounds
         [STAThread]
         static void Main()
         {
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            var x = new Piano();
+
             Application.Run(new Form1());
+
         }
     }
 }
