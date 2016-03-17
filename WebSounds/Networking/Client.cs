@@ -22,12 +22,9 @@ namespace WebSounds.Networking
         public ListBox listBox;
         public List<string> ml;
 
-
         List<AxWindowsMediaPlayer> hiHats;
         List<AxWindowsMediaPlayer> snares;
         List<AxWindowsMediaPlayer> kicks;
-
-
 
         public Client(string ipAddress, ListBox lb)
         {
