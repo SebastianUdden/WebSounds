@@ -132,63 +132,170 @@ namespace WebSounds
 
         private void btnC_Click(object sender, EventArgs e)
         {
-            myClient.Send("c");
-            //btnC.BackColor = Color.Blue;
+            int octave = 0;
+
+            if (rbHighOctave.Checked)
+                octave = 3;
+            else if (rbMiddleOctave.Checked)
+                octave = 2;
+            else
+                octave = 1;
+
+            myClient.SendMusicKey(instrument + octave.ToString() + "d");
         }
 
         private void btnDb_Click(object sender, EventArgs e)
         {
+            int octave = 0;
 
+            if (rbHighOctave.Checked)
+                octave = 3;
+            else if (rbMiddleOctave.Checked)
+                octave = 2;
+            else
+                octave = 1;
+
+            myClient.SendMusicKey(instrument + octave.ToString() + "r");
         }
 
         private void btnD_Click(object sender, EventArgs e)
         {
+            int octave = 0;
 
+            if (rbHighOctave.Checked)
+                octave = 3;
+            else if (rbMiddleOctave.Checked)
+                octave = 2;
+            else
+                octave = 1;
+
+            myClient.SendMusicKey(instrument + octave.ToString() + "f");
         }
 
         private void btnEb_Click(object sender, EventArgs e)
         {
+            int octave = 0;
 
+            if (rbHighOctave.Checked)
+                octave = 3;
+            else if (rbMiddleOctave.Checked)
+                octave = 2;
+            else
+                octave = 1;
+
+            myClient.SendMusicKey(instrument + octave.ToString() + "t");
         }
 
         private void btnE_Click(object sender, EventArgs e)
         {
+            int octave = 0;
 
+            if (rbHighOctave.Checked)
+                octave = 3;
+            else if (rbMiddleOctave.Checked)
+                octave = 2;
+            else
+                octave = 1;
+
+            myClient.SendMusicKey(instrument + octave.ToString() + "g");
         }
 
         private void btnF_Click(object sender, EventArgs e)
         {
+            int octave = 0;
 
+            if (rbHighOctave.Checked)
+                octave = 3;
+            else if (rbMiddleOctave.Checked)
+                octave = 2;
+            else
+                octave = 1;
+
+            myClient.SendMusicKey(instrument + octave.ToString() + "h");
         }
 
         private void btnGb_Click(object sender, EventArgs e)
         {
+            int octave = 0;
 
+            if (rbHighOctave.Checked)
+                octave = 3;
+            else if (rbMiddleOctave.Checked)
+                octave = 2;
+            else
+                octave = 1;
+
+            myClient.SendMusicKey(instrument + octave.ToString() + "u");
         }
 
         private void btnG_Click(object sender, EventArgs e)
         {
+            int octave = 0;
 
+            if (rbHighOctave.Checked)
+                octave = 3;
+            else if (rbMiddleOctave.Checked)
+                octave = 2;
+            else
+                octave = 1;
+
+            myClient.SendMusicKey(instrument + octave.ToString() + "j");
         }
 
         private void btnAb_Click(object sender, EventArgs e)
         {
+            int octave = 0;
 
+            if (rbHighOctave.Checked)
+                octave = 3;
+            else if (rbMiddleOctave.Checked)
+                octave = 2;
+            else
+                octave = 1;
+
+            myClient.SendMusicKey(instrument + octave.ToString() + "i");
         }
 
         private void btnA_Click(object sender, EventArgs e)
         {
+            int octave = 0;
 
+            if (rbHighOctave.Checked)
+                octave = 3;
+            else if (rbMiddleOctave.Checked)
+                octave = 2;
+            else
+                octave = 1;
+
+            myClient.SendMusicKey(instrument + octave.ToString() + "a");
         }
 
         private void btnBb_Click(object sender, EventArgs e)
         {
+            int octave = 0;
 
+            if (rbHighOctave.Checked)
+                octave = 3;
+            else if (rbMiddleOctave.Checked)
+                octave = 2;
+            else
+                octave = 1;
+
+            myClient.SendMusicKey(instrument + octave.ToString() + "w");
         }
 
         private void btnB_Click(object sender, EventArgs e)
         {
+            int octave = 0;
 
+            if (rbHighOctave.Checked)
+                octave = 3;
+            else if (rbMiddleOctave.Checked)
+                octave = 2;
+            else
+                octave = 1;
+
+            myClient.SendMusicKey(instrument + octave.ToString() + "s");
         }
     }
 }

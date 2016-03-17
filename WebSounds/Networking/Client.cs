@@ -92,10 +92,10 @@ namespace WebSounds.Networking
                             case "s":
                                 piano[counter].Notes[octave][(int)pianoNotes.B].Ctlcontrols.play();
                                 break;
-                            case "e":
+                            case "d":
                                 piano[counter].Notes[octave][(int)pianoNotes.C].Ctlcontrols.play();
                                 break;
-                            case "d":
+                            case "r":
                                 piano[counter].Notes[octave][(int)pianoNotes.Db].Ctlcontrols.play();
                                 break;
                             case "f":
@@ -107,16 +107,16 @@ namespace WebSounds.Networking
                             case "g":
                                 piano[counter].Notes[octave][(int)pianoNotes.E].Ctlcontrols.play();
                                 break;
-                            case "y":
+                            case "h":
                                 piano[counter].Notes[octave][(int)pianoNotes.F].Ctlcontrols.play();
                                 break;
-                            case "h":
+                            case "u":
                                 piano[counter].Notes[octave][(int)pianoNotes.Gb].Ctlcontrols.play();
                                 break;
-                            case "u":
+                            case "j":
                                 piano[counter].Notes[octave][(int)pianoNotes.G].Ctlcontrols.play();
                                 break;
-                            case "j":
+                            case "i":
                                 piano[counter].Notes[octave][(int)pianoNotes.Ab].Ctlcontrols.play();
                                 break;
                         }
