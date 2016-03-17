@@ -24,7 +24,7 @@ namespace WebSounds
         public static SoundPlayer snareHit;
         public static SoundPlayer hiHatHit;
         public static List<AxWindowsMediaPlayer> Drumkit1;
-        public string instrument; 
+        public string instrument;
 
         public Form1()
         {
@@ -32,7 +32,7 @@ namespace WebSounds
             messages = new List<string>();
             ListBox.CheckForIllegalCrossThreadCalls = false;
             kickHit = new SoundPlayer();
-            
+
             kickHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Kick - House.wav";
             snareHit = new SoundPlayer();
             snareHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Snare - House.wav";
@@ -42,9 +42,9 @@ namespace WebSounds
             Drumkit1 = new List<AxWindowsMediaPlayer>();
 
             for (int i = 0; i < 10; i++)
-            { 
+            {
                 Drumkit1.Add(new AxWindowsMediaPlayer());
-                Drumkit1[i].CreateControl(); 
+                Drumkit1[i].CreateControl();
             }
 
             this.KeyPress +=
@@ -67,7 +67,7 @@ namespace WebSounds
         {
 
             myClient.Send(tbMessage.Text);
-            lbChat.Items.Add("Me: " + tbMessage.Text);
+            //lbChat.Items.Add("Me: " + tbMessage.Text);
 
             Thread.Sleep(50);
             foreach (var message in messages)
@@ -100,8 +100,6 @@ namespace WebSounds
                 myClient.SendMusicKey(instrument + octave.ToString() + e.KeyChar.ToString());
             else
                 throw new Exception("No instrument");
-
-
         }
 
 
@@ -119,7 +117,7 @@ namespace WebSounds
                 cbPlayPiano.Checked = false;
             }
 
-            if(cbPlayDrums.Checked == false && cbPlayPiano.Checked == false)
+            if (cbPlayDrums.Checked == false && cbPlayPiano.Checked == false)
                 KeyPreview = false;
         }
 
@@ -135,6 +133,22 @@ namespace WebSounds
 
             if (cbPlayDrums.Checked == false && cbPlayPiano.Checked == false)
                 KeyPreview = false;
+        }
+
+        private void btnC_Click(object sender, EventArgs e)
+        {
+            btnC.BackColor = Color.Blue;
+
+            if (btnC.BackColor == Color.Blue)
+            {
+                Sleep();
+            }
+        }
+
+        private void Sleep()
+        {
+            Thread.Sleep(1000);
+            btnC.BackColor = Color.White;
         }
     }
 }

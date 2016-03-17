@@ -147,7 +147,7 @@ namespace WebSounds.Networking
                             counter = 0;
                     }
                     else
-                        listBox.Items.Add("Anonymous: " + message);
+                        listBox.Items.Add("Message: " + message);
                 }
             }
             catch (Exception ex)
