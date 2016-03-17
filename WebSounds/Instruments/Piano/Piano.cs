@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-enum pianoNotes { A, Bb, B, C }
+enum pianoNotes { A, Bb, B, C, Db, D, Eb, E, F, Gb, G, Ab}
 
 namespace WebSounds.Instruments.Piano
 {
