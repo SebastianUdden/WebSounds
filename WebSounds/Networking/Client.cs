@@ -64,8 +64,6 @@ namespace WebSounds.Networking
                 piano.Add(new Piano());
         }
 
-
-
         public void Listen()
         {
             string message = "";
