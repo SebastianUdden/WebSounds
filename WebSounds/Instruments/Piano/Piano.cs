@@ -28,7 +28,7 @@ namespace WebSounds.Instruments.Piano
                 { 0, "A" }, { 1, "Bb" }, {2, "B" }, {3, "C" }, {4, "Db" }, {5, "D" }, {6, "Eb" }, {7, "E" }, {8, "F" }, {9, "Gb" }, {10, "G" }, {11, "Ab" }
             };
 
-            octaves = 4;
+            octaves = 2;
             notePerOctave = 12;
 
             GenerateSounds();
@@ -46,7 +46,7 @@ namespace WebSounds.Instruments.Piano
 
             Debug.WriteLine("generating sounds");
 
-            for (int i = 2; i< octaves; i++)
+            for (int i = 0; i< octaves; i++)
             {
                 for(int j = 0; j< notePerOctave; j++)
                 {

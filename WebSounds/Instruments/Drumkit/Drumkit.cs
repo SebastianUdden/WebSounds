@@ -17,7 +17,7 @@ namespace WebSounds.Instruments.Drumkit
         public List<AxWindowsMediaPlayer> snares { get; set; }
         public List<AxWindowsMediaPlayer> kicks { get; set; }
 
-        public Drumkit(int threads = 5) : base()
+        public Drumkit() : base()
         {
             Sounds = new List<List<AxWindowsMediaPlayer>>();
             GenerateSounds();
