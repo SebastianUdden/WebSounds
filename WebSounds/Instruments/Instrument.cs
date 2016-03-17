@@ -15,7 +15,7 @@ namespace WebSounds.Instruments
         public int Threads { get; set; }
         public List<List<AxWindowsMediaPlayer>> Sounds { get; set; }
 
-        public Instrument(int threads = 10)
+        public Instrument(int threads = 3)
         {
             Threads = threads;
         }

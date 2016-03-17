@@ -58,6 +58,7 @@ namespace WebSounds
         static void StartClient(string ipAddress)
         {
             var listBox = Application.OpenForms["Form1"].Controls["lbChat"] as ListBox;
+
             myClient = new Client(ipAddress, listBox);
         }
 
@@ -81,8 +82,17 @@ namespace WebSounds
 
         void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
+            int octave = 0;
+
+            if (rbHighOctave.Checked)
+                octave = 3;
+            else if (rbMiddleOctave.Checked)
+                octave = 2;
+            else
+                octave = 1;
+
             Debug.WriteLine("Key pressed: " + e.KeyChar);
-            myClient.SendMusicKey("music"+e.KeyChar.ToString());
+            myClient.SendMusicKey("music"+ octave.ToString() + e.KeyChar.ToString());
         }
 
 
@@ -97,6 +107,11 @@ namespace WebSounds
                 KeyPreview = true;
             else
                 KeyPreview = false;
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

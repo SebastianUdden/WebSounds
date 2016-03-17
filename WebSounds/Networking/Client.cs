@@ -32,7 +32,6 @@ namespace WebSounds.Networking
         List<Instrument> instruments;
         List<Piano> piano;
 
-
         public Client(string ipAddress, ListBox lb)
         {
             #region Get local IP
@@ -71,7 +70,7 @@ namespace WebSounds.Networking
         {
             string message = "";
             int counter = 0;
-
+            int octave = 0;
             try
             {
                 while (true)
@@ -81,9 +80,10 @@ namespace WebSounds.Networking
 
                     if (message.Substring(0, 5) == "music")
                     {
-                        Debug.WriteLine("hello " + message.Substring(5, 1));
+                        if (int.TryParse(message.Substring(5, 1), out octave) == false)
+                            throw new Exception("Could not parse");
 
-                        switch (message.Substring(5, 1))
+                        switch (message.Substring(6, 1))
                         {
                             case "a":
                                 instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.kick][counter].Ctlcontrols.play();
@@ -95,7 +95,7 @@ namespace WebSounds.Networking
                                 instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.hiHat][counter].Ctlcontrols.play();
                                 break;
                             case "d":
-                                piano[counter].Notes[(int)pianoNotes.A][1].Ctlcontrols.play();
+                                piano[counter].Notes[(int)pianoNotes.A][octave].Ctlcontrols.play();
                                 break;
                             case "t":
                                 instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.kick][counter].Ctlcontrols.play();

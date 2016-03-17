@@ -19,14 +19,9 @@ namespace WebSounds
         [STAThread]
         static void Main()
         {
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            var x = new Piano();
-
             Application.Run(new Form1());
-
         }
     }
 }
