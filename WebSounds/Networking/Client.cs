@@ -95,7 +95,7 @@ namespace WebSounds.Networking
                                 instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.hiHat][counter].Ctlcontrols.play();
                                 break;
                             case "d":
-                                piano[counter].Notes[(int)pianoNotes.A][]
+                                piano[counter].Notes[(int)pianoNotes.A][1].Ctlcontrols.play();
                                 break;
                             case "t":
                                 instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.kick][counter].Ctlcontrols.play();
