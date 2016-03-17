@@ -66,6 +66,8 @@ namespace WebSounds.Networking
                 piano.Add(new Piano());
         }
 
+
+
         public void Listen()
         {
             string message = "";
@@ -118,8 +120,6 @@ namespace WebSounds.Networking
                     }
                     else
                         listBox.Items.Add("Anonymous: " + message);
-
-                    //var chat = Application.OpenForms["Form1"].Controls["lbChat"] as ListBox;
                 }
             }
             catch (Exception ex)
