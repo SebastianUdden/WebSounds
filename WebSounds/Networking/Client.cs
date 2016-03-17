@@ -98,28 +98,28 @@ namespace WebSounds.Networking
                                 piano[counter].Notes[octave][(int)pianoNotes.C].Ctlcontrols.play();
                                 break;
                             case "d":
-                                piano[counter].Notes[(int)pianoNotes.Db][octave].Ctlcontrols.play();
+                                piano[counter].Notes[octave][(int)pianoNotes.Db].Ctlcontrols.play();
                                 break;
                             case "f":
-                                piano[counter].Notes[(int)pianoNotes.D][octave].Ctlcontrols.play();
+                                piano[counter].Notes[octave][(int)pianoNotes.D].Ctlcontrols.play();
                                 break;
                             case "t":
-                                piano[counter].Notes[(int)pianoNotes.Eb][octave].Ctlcontrols.play();
+                                piano[counter].Notes[octave][(int)pianoNotes.Eb].Ctlcontrols.play();
                                 break;
                             case "g":
-                                piano[counter].Notes[(int)pianoNotes.E][octave].Ctlcontrols.play();
+                                piano[counter].Notes[octave][(int)pianoNotes.E].Ctlcontrols.play();
                                 break;
                             case "y":
-                                piano[counter].Notes[(int)pianoNotes.F][octave].Ctlcontrols.play();
+                                piano[counter].Notes[octave][(int)pianoNotes.F].Ctlcontrols.play();
                                 break;
                             case "h":
-                                piano[counter].Notes[(int)pianoNotes.Gb][octave].Ctlcontrols.play();
+                                piano[counter].Notes[octave][(int)pianoNotes.Gb].Ctlcontrols.play();
                                 break;
                             case "u":
-                                piano[counter].Notes[(int)pianoNotes.G][octave].Ctlcontrols.play();
+                                piano[counter].Notes[octave][(int)pianoNotes.G].Ctlcontrols.play();
                                 break;
                             case "j":
-                                piano[counter].Notes[(int)pianoNotes.Ab][octave].Ctlcontrols.play();
+                                piano[counter].Notes[octave][(int)pianoNotes.Ab].Ctlcontrols.play();
                                 break;
 
                                 /*
