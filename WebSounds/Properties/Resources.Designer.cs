@@ -329,5 +329,311 @@ namespace WebSounds.Properties {
                 return ResourceManager.GetStream("_39177__jobro__piano_ff_030", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39178__jobro__piano_ff_031 {
+            get {
+                return ResourceManager.GetStream("_39178__jobro__piano_ff_031", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39179__jobro__piano_ff_032 {
+            get {
+                return ResourceManager.GetStream("_39179__jobro__piano_ff_032", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39180__jobro__piano_ff_033 {
+            get {
+                return ResourceManager.GetStream("_39180__jobro__piano_ff_033", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39181__jobro__piano_ff_034 {
+            get {
+                return ResourceManager.GetStream("_39181__jobro__piano_ff_034", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39182__jobro__piano_ff_035 {
+            get {
+                return ResourceManager.GetStream("_39182__jobro__piano_ff_035", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39183__jobro__piano_ff_036 {
+            get {
+                return ResourceManager.GetStream("_39183__jobro__piano_ff_036", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39184__jobro__piano_ff_037 {
+            get {
+                return ResourceManager.GetStream("_39184__jobro__piano_ff_037", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39185__jobro__piano_ff_038 {
+            get {
+                return ResourceManager.GetStream("_39185__jobro__piano_ff_038", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39186__jobro__piano_ff_039 {
+            get {
+                return ResourceManager.GetStream("_39186__jobro__piano_ff_039", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39187__jobro__piano_ff_040 {
+            get {
+                return ResourceManager.GetStream("_39187__jobro__piano_ff_040", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39188__jobro__piano_ff_041 {
+            get {
+                return ResourceManager.GetStream("_39188__jobro__piano_ff_041", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39189__jobro__piano_ff_042 {
+            get {
+                return ResourceManager.GetStream("_39189__jobro__piano_ff_042", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39190__jobro__piano_ff_043 {
+            get {
+                return ResourceManager.GetStream("_39190__jobro__piano_ff_043", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39191__jobro__piano_ff_044 {
+            get {
+                return ResourceManager.GetStream("_39191__jobro__piano_ff_044", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39193__jobro__piano_ff_045 {
+            get {
+                return ResourceManager.GetStream("_39193__jobro__piano_ff_045", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39194__jobro__piano_ff_046 {
+            get {
+                return ResourceManager.GetStream("_39194__jobro__piano_ff_046", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39195__jobro__piano_ff_047 {
+            get {
+                return ResourceManager.GetStream("_39195__jobro__piano_ff_047", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39196__jobro__piano_ff_048 {
+            get {
+                return ResourceManager.GetStream("_39196__jobro__piano_ff_048", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39197__jobro__piano_ff_049 {
+            get {
+                return ResourceManager.GetStream("_39197__jobro__piano_ff_049", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39198__jobro__piano_ff_050 {
+            get {
+                return ResourceManager.GetStream("_39198__jobro__piano_ff_050", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39199__jobro__piano_ff_051 {
+            get {
+                return ResourceManager.GetStream("_39199__jobro__piano_ff_051", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39200__jobro__piano_ff_052 {
+            get {
+                return ResourceManager.GetStream("_39200__jobro__piano_ff_052", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39201__jobro__piano_ff_053 {
+            get {
+                return ResourceManager.GetStream("_39201__jobro__piano_ff_053", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39202__jobro__piano_ff_054 {
+            get {
+                return ResourceManager.GetStream("_39202__jobro__piano_ff_054", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39203__jobro__piano_ff_055 {
+            get {
+                return ResourceManager.GetStream("_39203__jobro__piano_ff_055", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39204__jobro__piano_ff_056 {
+            get {
+                return ResourceManager.GetStream("_39204__jobro__piano_ff_056", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39205__jobro__piano_ff_057 {
+            get {
+                return ResourceManager.GetStream("_39205__jobro__piano_ff_057", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39206__jobro__piano_ff_058 {
+            get {
+                return ResourceManager.GetStream("_39206__jobro__piano_ff_058", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39207__jobro__piano_ff_059 {
+            get {
+                return ResourceManager.GetStream("_39207__jobro__piano_ff_059", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39208__jobro__piano_ff_060 {
+            get {
+                return ResourceManager.GetStream("_39208__jobro__piano_ff_060", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39209__jobro__piano_ff_061 {
+            get {
+                return ResourceManager.GetStream("_39209__jobro__piano_ff_061", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39210__jobro__piano_ff_062 {
+            get {
+                return ResourceManager.GetStream("_39210__jobro__piano_ff_062", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39211__jobro__piano_ff_063 {
+            get {
+                return ResourceManager.GetStream("_39211__jobro__piano_ff_063", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _39212__jobro__piano_ff_064 {
+            get {
+                return ResourceManager.GetStream("_39212__jobro__piano_ff_064", resourceCulture);
+            }
+        }
     }
 }
