@@ -68,6 +68,7 @@ namespace WebSounds.Networking
         {
             string message = "";
             int counter = 0;
+            int pianoCounter = 0;
             int octave = 0;
             try
             {
@@ -84,46 +85,46 @@ namespace WebSounds.Networking
                         switch (message.Substring(6, 1))
                         {
                             case "a":
-                                piano[counter].Notes[octave][(int)pianoNotes.A].Ctlcontrols.play();
+                                piano[pianoCounter].Notes[octave][(int)pianoNotes.A].Ctlcontrols.play();
                                 break;
                             case "w":
-                                piano[counter].Notes[octave][(int)pianoNotes.Bb].Ctlcontrols.play();
+                                piano[pianoCounter].Notes[octave][(int)pianoNotes.Bb].Ctlcontrols.play();
                                 break;
                             case "s":
-                                piano[counter].Notes[octave][(int)pianoNotes.B].Ctlcontrols.play();
+                                piano[pianoCounter].Notes[octave][(int)pianoNotes.B].Ctlcontrols.play();
                                 break;
                             case "d":
-                                piano[counter].Notes[octave][(int)pianoNotes.C].Ctlcontrols.play();
+                                piano[pianoCounter].Notes[octave][(int)pianoNotes.C].Ctlcontrols.play();
                                 break;
                             case "r":
-                                piano[counter].Notes[octave][(int)pianoNotes.Db].Ctlcontrols.play();
+                                piano[pianoCounter].Notes[octave][(int)pianoNotes.Db].Ctlcontrols.play();
                                 break;
                             case "f":
-                                piano[counter].Notes[octave][(int)pianoNotes.D].Ctlcontrols.play();
+                                piano[pianoCounter].Notes[octave][(int)pianoNotes.D].Ctlcontrols.play();
                                 break;
                             case "t":
-                                piano[counter].Notes[octave][(int)pianoNotes.Eb].Ctlcontrols.play();
+                                piano[pianoCounter].Notes[octave][(int)pianoNotes.Eb].Ctlcontrols.play();
                                 break;
                             case "g":
-                                piano[counter].Notes[octave][(int)pianoNotes.E].Ctlcontrols.play();
+                                piano[pianoCounter].Notes[octave][(int)pianoNotes.E].Ctlcontrols.play();
                                 break;
                             case "h":
-                                piano[counter].Notes[octave][(int)pianoNotes.F].Ctlcontrols.play();
+                                piano[pianoCounter].Notes[octave][(int)pianoNotes.F].Ctlcontrols.play();
                                 break;
                             case "u":
-                                piano[counter].Notes[octave][(int)pianoNotes.Gb].Ctlcontrols.play();
+                                piano[pianoCounter].Notes[octave][(int)pianoNotes.Gb].Ctlcontrols.play();
                                 break;
                             case "j":
-                                piano[counter].Notes[octave][(int)pianoNotes.G].Ctlcontrols.play();
+                                piano[pianoCounter].Notes[octave][(int)pianoNotes.G].Ctlcontrols.play();
                                 break;
                             case "i":
-                                piano[counter].Notes[octave][(int)pianoNotes.Ab].Ctlcontrols.play();
+                                piano[pianoCounter].Notes[octave][(int)pianoNotes.Ab].Ctlcontrols.play();
                                 break;
                         }
-                        counter++;
+                        pianoCounter++;
 
-                        if (counter >= instruments[0].Threads)
-                            counter = 0;
+                        if (pianoCounter >= instruments[0].Threads)
+                            pianoCounter = 0;
                     }
                     else if (message.Substring(0, 5) == "drums")
                     {
