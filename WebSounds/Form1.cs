@@ -29,6 +29,7 @@ namespace WebSounds
 
         public Form1()
         {
+            this.BackColor = Color.DodgerBlue;
             InitializeComponent();
             messages = new List<string>();
             ListBox.CheckForIllegalCrossThreadCalls = false;
@@ -118,12 +119,12 @@ namespace WebSounds
 
         private void cbPlayDrums_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbPlayDrums.Checked == true)
-            {
-                rbLowOctave.Checked = false;
-                rbMiddleOctave.Checked = false;
-                rbHighOctave.Checked = false;
+            rbLowOctave.Checked = false;
+            rbMiddleOctave.Checked = false;
+            rbHighOctave.Checked = false;
 
+            if (cbPlayDrums.Checked == true)
+            {            
                 KeyPreview = true;
                 instrument = "drums";
                 cbPlayPiano.Checked = false;
