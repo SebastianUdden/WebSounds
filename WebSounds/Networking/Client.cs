@@ -138,6 +138,18 @@ namespace WebSounds.Networking
                             case "s":
                                 instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.hiHat][counter].Ctlcontrols.play();
                                 break;
+                            case "d":
+                                instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.hiHat2][counter].Ctlcontrols.play();
+                                break;
+                            case "r":
+                                instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.tom][counter].Ctlcontrols.play();
+                                break;
+                            case "f":
+                                instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.tom2][counter].Ctlcontrols.play();
+                                break;
+                            case "t":
+                                instruments[(int)instrumentNumbers.drumkit].Sounds[(int)drumkitSounds.tom3][counter].Ctlcontrols.play();
+                                break;
                         }
                         counter++;
 

@@ -119,12 +119,13 @@
             // mpBasic
             // 
             this.mpBasic.Enabled = true;
-            this.mpBasic.Location = new System.Drawing.Point(719, 267);
+            this.mpBasic.Location = new System.Drawing.Point(719, 379);
             this.mpBasic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mpBasic.Name = "mpBasic";
             this.mpBasic.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mpBasic.OcxState")));
-            this.mpBasic.Size = new System.Drawing.Size(239, 191);
+            this.mpBasic.Size = new System.Drawing.Size(239, 79);
             this.mpBasic.TabIndex = 9;
+            this.mpBasic.Visible = false;
             // 
             // cbPlayDrums
             // 
@@ -327,7 +328,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1011, 656);
+            this.ClientSize = new System.Drawing.Size(970, 560);
             this.Controls.Add(this.btnAb);
             this.Controls.Add(this.btnGb);
             this.Controls.Add(this.btnEb);

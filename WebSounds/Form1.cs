@@ -25,12 +25,16 @@ namespace WebSounds
         public static SoundPlayer hiHatHit;
         public static List<AxWindowsMediaPlayer> Drumkit1;
         public string instrument;
+        Stopwatch stop;
+        Thread newThread;
 
         public Form1()
         {
             InitializeComponent();
             messages = new List<string>();
             ListBox.CheckForIllegalCrossThreadCalls = false;
+            stop = new Stopwatch();
+
             kickHit = new SoundPlayer();
 
             kickHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Kick - House.wav";
@@ -142,6 +146,32 @@ namespace WebSounds
                 octave = 1;
 
             myClient.SendMusicKey(instrument + octave.ToString() + "d");
+
+            //stop.Start();
+            //System.Threading.Timer timer = new System.Threading.Timer(ChangeColor(), null, 200, 500);//
+        }
+
+        public void SetKeyColor ()
+        {
+            //while (true)
+            //{
+            //    if (stop.ElapsedMilliseconds > 100 && stop.ElapsedMilliseconds < 2000)
+            //    {
+            //        btnC.BackColor = Color.Red;
+            //    }
+            //    else if (stop.ElapsedMilliseconds < 4000)
+            //    {
+            //        btnC.BackColor = Color.Turquoise;
+            //        stop.Stop();
+            //        break;
+            //    }
+            //}
+        }
+
+        private TimerCallback ChangeColor()
+        {
+            btnC.BackColor = Color.White;
+            return null;
         }
 
         private void btnDb_Click(object sender, EventArgs e)
