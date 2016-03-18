@@ -26,7 +26,6 @@ namespace WebSounds
         public static List<AxWindowsMediaPlayer> Drumkit1;
         public string instrument;
         Stopwatch stop;
-        Thread newThread;
 
         public Form1()
         {
@@ -35,8 +34,20 @@ namespace WebSounds
             ListBox.CheckForIllegalCrossThreadCalls = false;
             stop = new Stopwatch();
 
-            kickHit = new SoundPlayer();
+            btnC.BackColor = Color.White;
+            btnDb.BackColor = Color.Black;
+            btnD.BackColor = Color.White;
+            btnEb.BackColor = Color.Black;
+            btnE.BackColor = Color.White;
+            btnF.BackColor = Color.White;
+            btnGb.BackColor = Color.Black;
+            btnG.BackColor = Color.White;
+            btnAb.BackColor = Color.Black;
+            btnA.BackColor = Color.White;
+            btnBb.BackColor = Color.Black;
+            btnB.BackColor = Color.White;
 
+            kickHit = new SoundPlayer();
             kickHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Kick - House.wav";
             snareHit = new SoundPlayer();
             snareHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Snare - House.wav";
@@ -44,7 +55,6 @@ namespace WebSounds
             hiHatHit.SoundLocation = @"C:\Users\Administrator\Source\Repos\WebSounds\WebSounds\Sounds\Instruments\Drums\Drumkit 1\Hihat 2 - Echoed.wav";
 
             Drumkit1 = new List<AxWindowsMediaPlayer>();
-
             for (int i = 0; i < 10; i++)
             {
                 Drumkit1.Add(new AxWindowsMediaPlayer());
@@ -69,7 +79,6 @@ namespace WebSounds
 
         private void bSendMessage_Click(object sender, EventArgs e)
         {
-
             myClient.Send(tbMessage.Text);
             //lbChat.Items.Add("Me: " + tbMessage.Text);
 
@@ -111,6 +120,10 @@ namespace WebSounds
         {
             if (cbPlayDrums.Checked == true)
             {
+                rbLowOctave.Checked = false;
+                rbMiddleOctave.Checked = false;
+                rbHighOctave.Checked = false;
+
                 KeyPreview = true;
                 instrument = "drums";
                 cbPlayPiano.Checked = false;
@@ -125,9 +138,16 @@ namespace WebSounds
         {
             if (cbPlayPiano.Checked == true)
             {
+                rbMiddleOctave.Checked = true;
                 KeyPreview = true;
                 instrument = "piano";
                 cbPlayDrums.Checked = false;
+            }
+            else
+            {
+                rbLowOctave.Checked = false;
+                rbMiddleOctave.Checked = false;
+                rbHighOctave.Checked = false;
             }
 
             if (cbPlayDrums.Checked == false && cbPlayPiano.Checked == false)
@@ -136,19 +156,8 @@ namespace WebSounds
 
         private void btnC_Click(object sender, EventArgs e)
         {
-            int octave = 0;
-
-            if (rbHighOctave.Checked)
-                octave = 3;
-            else if (rbMiddleOctave.Checked)
-                octave = 2;
-            else
-                octave = 1;
-
-            myClient.SendMusicKey(instrument + octave.ToString() + "d");
-
-            //stop.Start();
-            //System.Threading.Timer timer = new System.Threading.Timer(ChangeColor(), null, 200, 500);//
+            myClient.SendMusicKey(instrument + OctaveCheck().ToString() + "d");
+            btnColorChange(btnC);
         }
 
         public void SetKeyColor ()
@@ -176,156 +185,111 @@ namespace WebSounds
 
         private void btnDb_Click(object sender, EventArgs e)
         {
-            int octave = 0;
-
-            if (rbHighOctave.Checked)
-                octave = 3;
-            else if (rbMiddleOctave.Checked)
-                octave = 2;
-            else
-                octave = 1;
-
-            myClient.SendMusicKey(instrument + octave.ToString() + "r");
+            myClient.SendMusicKey(instrument + OctaveCheck().ToString() + "r");
+            btnColorChange(btnDb);
         }
 
         private void btnD_Click(object sender, EventArgs e)
         {
-            int octave = 0;
-
-            if (rbHighOctave.Checked)
-                octave = 3;
-            else if (rbMiddleOctave.Checked)
-                octave = 2;
-            else
-                octave = 1;
-
-            myClient.SendMusicKey(instrument + octave.ToString() + "f");
+            myClient.SendMusicKey(instrument + OctaveCheck().ToString() + "f");
+            btnColorChange(btnD);
         }
 
         private void btnEb_Click(object sender, EventArgs e)
         {
-            int octave = 0;
-
-            if (rbHighOctave.Checked)
-                octave = 3;
-            else if (rbMiddleOctave.Checked)
-                octave = 2;
-            else
-                octave = 1;
-
-            myClient.SendMusicKey(instrument + octave.ToString() + "t");
+            myClient.SendMusicKey(instrument + OctaveCheck().ToString() + "t");
+            btnColorChange(btnEb);
         }
 
         private void btnE_Click(object sender, EventArgs e)
         {
-            int octave = 0;
-
-            if (rbHighOctave.Checked)
-                octave = 3;
-            else if (rbMiddleOctave.Checked)
-                octave = 2;
-            else
-                octave = 1;
-
-            myClient.SendMusicKey(instrument + octave.ToString() + "g");
+            myClient.SendMusicKey(instrument + OctaveCheck().ToString() + "g");
+            btnColorChange(btnE);
         }
 
         private void btnF_Click(object sender, EventArgs e)
         {
-            int octave = 0;
-
-            if (rbHighOctave.Checked)
-                octave = 3;
-            else if (rbMiddleOctave.Checked)
-                octave = 2;
-            else
-                octave = 1;
-
-            myClient.SendMusicKey(instrument + octave.ToString() + "h");
+            myClient.SendMusicKey(instrument + OctaveCheck().ToString() + "h");
+            btnColorChange(btnF);
         }
 
         private void btnGb_Click(object sender, EventArgs e)
         {
-            int octave = 0;
-
-            if (rbHighOctave.Checked)
-                octave = 3;
-            else if (rbMiddleOctave.Checked)
-                octave = 2;
-            else
-                octave = 1;
-
-            myClient.SendMusicKey(instrument + octave.ToString() + "u");
+            myClient.SendMusicKey(instrument + OctaveCheck().ToString() + "u");
+            btnColorChange(btnGb);
         }
 
         private void btnG_Click(object sender, EventArgs e)
         {
-            int octave = 0;
-
-            if (rbHighOctave.Checked)
-                octave = 3;
-            else if (rbMiddleOctave.Checked)
-                octave = 2;
-            else
-                octave = 1;
-
-            myClient.SendMusicKey(instrument + octave.ToString() + "j");
+            myClient.SendMusicKey(instrument + OctaveCheck().ToString() + "j");
+            btnColorChange(btnG);
         }
 
         private void btnAb_Click(object sender, EventArgs e)
         {
-            int octave = 0;
-
-            if (rbHighOctave.Checked)
-                octave = 3;
-            else if (rbMiddleOctave.Checked)
-                octave = 2;
-            else
-                octave = 1;
-
-            myClient.SendMusicKey(instrument + octave.ToString() + "i");
+            myClient.SendMusicKey(instrument + OctaveCheck().ToString() + "i");
+            btnColorChange(btnAb);
         }
 
         private void btnA_Click(object sender, EventArgs e)
         {
-            int octave = 0;
-
-            if (rbHighOctave.Checked)
-                octave = 3;
-            else if (rbMiddleOctave.Checked)
-                octave = 2;
-            else
-                octave = 1;
-
-            myClient.SendMusicKey(instrument + octave.ToString() + "a");
+            myClient.SendMusicKey(instrument + OctaveCheck().ToString() + "a");
+            btnColorChange(btnA);
         }
 
         private void btnBb_Click(object sender, EventArgs e)
         {
-            int octave = 0;
-
-            if (rbHighOctave.Checked)
-                octave = 3;
-            else if (rbMiddleOctave.Checked)
-                octave = 2;
-            else
-                octave = 1;
-
-            myClient.SendMusicKey(instrument + octave.ToString() + "w");
+            myClient.SendMusicKey(instrument + OctaveCheck().ToString() + "w");
+            btnColorChange(btnBb);
         }
 
         private void btnB_Click(object sender, EventArgs e)
         {
-            int octave = 0;
+            myClient.SendMusicKey(instrument + OctaveCheck().ToString() + "s");
+            btnColorChange(btnB);
+        }
 
+        private void btnColorChange(Button btn)
+        {
+            timer1.Interval = 300;
+            timer1.Start();
+            btn.BackColor = Color.Gray;
+        }
+
+        private int OctaveCheck()
+        {
             if (rbHighOctave.Checked)
-                octave = 3;
-            else if (rbMiddleOctave.Checked)
-                octave = 2;
+                return 3;
+            else if (rbLowOctave.Checked)
+                return 1;
             else
-                octave = 1;
+                return 2;
+        }
 
-            myClient.SendMusicKey(instrument + octave.ToString() + "s");
+        private void tbMessage_MouseClick(object sender, MouseEventArgs e)
+        {
+            KeyPreview = false;
+            cbPlayPiano.Checked = false;
+            cbPlayDrums.Checked = false;
+            rbLowOctave.Checked = false;
+            rbMiddleOctave.Checked = false;
+            rbHighOctave.Checked = false;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            btnC.BackColor = Color.White;
+            btnDb.BackColor = Color.Black;
+            btnD.BackColor = Color.White;
+            btnEb.BackColor = Color.Black;
+            btnE.BackColor = Color.White;
+            btnF.BackColor = Color.White;
+            btnGb.BackColor = Color.Black;
+            btnG.BackColor = Color.White;
+            btnAb.BackColor = Color.Black;
+            btnA.BackColor = Color.White;
+            btnBb.BackColor = Color.Black;
+            btnB.BackColor = Color.White;
         }
     }
 }

@@ -29,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tbIP = new System.Windows.Forms.TextBox();
             this.bConnect = new System.Windows.Forms.Button();
@@ -54,6 +55,7 @@
             this.btnEb = new System.Windows.Forms.Button();
             this.btnGb = new System.Windows.Forms.Button();
             this.btnAb = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mpBasic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,6 +86,7 @@
             this.tbMessage.Name = "tbMessage";
             this.tbMessage.Size = new System.Drawing.Size(463, 22);
             this.tbMessage.TabIndex = 3;
+            this.tbMessage.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbMessage_MouseClick);
             // 
             // bSendMessage
             // 
@@ -324,6 +327,10 @@
             this.btnAb.UseVisualStyleBackColor = false;
             this.btnAb.Click += new System.EventHandler(this.btnAb_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -388,6 +395,7 @@
         private System.Windows.Forms.Button btnEb;
         private System.Windows.Forms.Button btnGb;
         private System.Windows.Forms.Button btnAb;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
